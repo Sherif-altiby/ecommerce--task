@@ -1,0 +1,23 @@
+{
+  "signIn":            "Sign In",
+  "wishlist":          "Wishlist",
+  "cart":              "Cart",
+  "heroBadge":         "1M+ products available",
+  "heroTitle":         "Your Favourite",
+  "heroSubtitle":      "Store, Reimagined",
+  "heroDescription":   "Discover the best deals across thousands of categories",
+  "searchPlaceholder": "Search products, brands, categories...",
+  "search":            "Search",
+  "bestSellers":       "Best",
+  "sellers":           "Sellers",
+  "seeAll":            "See all",
+  "all":               "All",
+  "addToCart":         "Add",
+  "hot":               "Hot",
+  "sale":              "Sale",
+  "new":               "New",
+  "statProducts": "Products",
+  "statSellers":  "Sellers",
+  "statRating":   "Avg Rating",
+  "statReturns":  "Free Returns"
+}

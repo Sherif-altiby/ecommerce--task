@@ -1,0 +1,23 @@
+{
+  "signIn":            "تسجيل الدخول",
+  "wishlist":          "المفضلة",
+  "cart":              "السلة",
+  "heroBadge":         "أكثر من مليون منتج متاح",
+  "heroTitle":         "تسوّق كل ما",
+  "heroSubtitle":      "تحبّه بسهولة",
+  "heroDescription":   "اكتشف أفضل العروض عبر آلاف الفئات",
+  "searchPlaceholder": "ابحث عن منتجات، ماركات...",
+  "search":            "بحث",
+  "bestSellers":       "الأكثر",
+  "sellers":           "مبيعاً",
+  "seeAll":            "عرض الكل",
+  "all":               "الكل",
+  "addToCart":         "أضف",
+  "hot":               "رائج",
+  "sale":              "تخفيض",
+  "new":               "جديد",
+  "statProducts":      "منتج",
+  "statSellers":       "بائع",
+  "statRating":        "متوسط التقييم",
+  "statReturns":       "إرجاع مجاني"
+}
