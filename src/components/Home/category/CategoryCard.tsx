@@ -1,7 +1,7 @@
-import { iconMap } from '../../utils/iconMap';
 import { Zap } from 'lucide-react';
-import { useLang } from '../../store/hooks';
-import type { Category } from '../../types';
+import { useLang } from '../../../store/hooks';
+import { iconMap } from '../../../utils/iconMap';
+import type { Category } from '../../../types';
 
 interface CategoryCardProps {
   category:        Category;

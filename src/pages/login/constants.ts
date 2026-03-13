@@ -12,3 +12,10 @@ export const DUMMY_USERS = [
     name:     "Sara Mohamed",
   },
 ];
+
+
+export  const badgeStyles: Record<string, string> = {
+  Hot:  "bg-red-500",
+  Sale: "bg-emerald-500",
+  New:  "bg-violet-500",
+};

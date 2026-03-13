@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import HomePage from './pages/homePage';
+import HomePage from './pages/HomePage';
 import { useAppSelector } from './store/hooks';
 import Header from './components/Home/Header';
 import Login from './pages/login/Login';

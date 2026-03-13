@@ -1,703 +1,336 @@
 {
   "categories": [
     {
-      "id": 1,
-      "name": "Electronics",
-      "nameAr": "إلكترونيات",
-      "icon": "zap",
-      "image": "🖥️",
-      "productCount": 120,
+      "id": 1, "name": "Electronics", "nameAr": "إلكترونيات", "icon": "zap", "image": "🖥️", "productCount": 320,
       "subCategories": [
-        {
-          "id": 11,
-          "name": "Phones & Tablets",
-          "nameAr": "هواتف وأجهزة لوحية",
-          "childCategories": [
-            { "id": 111, "name": "Smartphones",  "nameAr": "هواتف ذكية"     },
-            { "id": 112, "name": "Tablets",       "nameAr": "أجهزة لوحية"   },
-            { "id": 113, "name": "Accessories",   "nameAr": "إكسسوارات"     }
-          ]
-        },
-        {
-          "id": 12,
-          "name": "Computers",
-          "nameAr": "حواسيب",
-          "childCategories": [
-            { "id": 121, "name": "Laptops",       "nameAr": "لابتوب"         },
-            { "id": 122, "name": "Desktops",      "nameAr": "كمبيوتر مكتبي" },
-            { "id": 123, "name": "Monitors",      "nameAr": "شاشات"         }
-          ]
-        },
-        {
-          "id": 13,
-          "name": "Audio",
-          "nameAr": "صوتيات",
-          "childCategories": [
-            { "id": 131, "name": "Headphones",    "nameAr": "سماعات رأس"    },
-            { "id": 132, "name": "Speakers",      "nameAr": "مكبرات صوت"    },
-            { "id": 133, "name": "Microphones",   "nameAr": "ميكروفونات"    }
-          ]
-        }
+        { "id": 11, "name": "Phones & Tablets", "nameAr": "هواتف وأجهزة لوحية", "childCategories": [
+            { "id": 111, "name": "Smartphones",  "nameAr": "هواتف ذكية"   },
+            { "id": 112, "name": "Tablets",      "nameAr": "أجهزة لوحية" },
+            { "id": 113, "name": "Accessories",  "nameAr": "إكسسوارات"   }
+        ]},
+        { "id": 12, "name": "Computers", "nameAr": "حواسيب", "childCategories": [
+            { "id": 121, "name": "Laptops",   "nameAr": "لابتوب"         },
+            { "id": 122, "name": "Desktops",  "nameAr": "كمبيوتر مكتبي" },
+            { "id": 123, "name": "Monitors",  "nameAr": "شاشات"         }
+        ]},
+        { "id": 13, "name": "Audio", "nameAr": "صوتيات", "childCategories": [
+            { "id": 131, "name": "Headphones",  "nameAr": "سماعات رأس"  },
+            { "id": 132, "name": "Speakers",    "nameAr": "مكبرات صوت"  },
+            { "id": 133, "name": "Microphones", "nameAr": "ميكروفونات"  }
+        ]},
+        { "id": 14, "name": "Gaming", "nameAr": "ألعاب إلكترونية", "childCategories": [
+            { "id": 141, "name": "Consoles",    "nameAr": "أجهزة ألعاب" },
+            { "id": 142, "name": "Controllers", "nameAr": "أذرع تحكم"   },
+            { "id": 143, "name": "Games",       "nameAr": "ألعاب"       }
+        ]}
       ]
     },
     {
-      "id": 2,
-      "name": "Fashion",
-      "nameAr": "أزياء",
-      "icon": "shirt",
-      "image": "👗",
-      "productCount": 89,
+      "id": 2, "name": "Fashion", "nameAr": "أزياء", "icon": "shirt", "image": "👗", "productCount": 280,
       "subCategories": [
-        {
-          "id": 21,
-          "name": "Men",
-          "nameAr": "رجال",
-          "childCategories": [
-            { "id": 211, "name": "Shirts",        "nameAr": "قمصان"         },
-            { "id": 212, "name": "Pants",         "nameAr": "بناطيل"        },
-            { "id": 213, "name": "Shoes",         "nameAr": "أحذية"         }
-          ]
-        },
-        {
-          "id": 22,
-          "name": "Women",
-          "nameAr": "نساء",
-          "childCategories": [
-            { "id": 221, "name": "Dresses",       "nameAr": "فساتين"        },
-            { "id": 222, "name": "Tops",          "nameAr": "توبات"         },
-            { "id": 223, "name": "Bags",          "nameAr": "حقائب"         }
-          ]
-        },
-        {
-          "id": 23,
-          "name": "Kids",
-          "nameAr": "أطفال",
-          "childCategories": [
-            { "id": 231, "name": "Boys",          "nameAr": "أولاد"         },
-            { "id": 232, "name": "Girls",         "nameAr": "بنات"          },
-            { "id": 233, "name": "Baby",          "nameAr": "رضع"           }
-          ]
-        }
+        { "id": 21, "name": "Men", "nameAr": "رجال", "childCategories": [
+            { "id": 211, "name": "Shirts",   "nameAr": "قمصان"   },
+            { "id": 212, "name": "Pants",    "nameAr": "بناطيل"  },
+            { "id": 213, "name": "Shoes",    "nameAr": "أحذية"   },
+            { "id": 214, "name": "Jackets",  "nameAr": "جاكيتات" }
+        ]},
+        { "id": 22, "name": "Women", "nameAr": "نساء", "childCategories": [
+            { "id": 221, "name": "Dresses", "nameAr": "فساتين"    },
+            { "id": 222, "name": "Tops",    "nameAr": "توبات"     },
+            { "id": 223, "name": "Bags",    "nameAr": "حقائب"     },
+            { "id": 224, "name": "Heels",   "nameAr": "كعب عالي" }
+        ]},
+        { "id": 23, "name": "Kids", "nameAr": "أطفال", "childCategories": [
+            { "id": 231, "name": "Boys",  "nameAr": "أولاد" },
+            { "id": 232, "name": "Girls", "nameAr": "بنات"  },
+            { "id": 233, "name": "Baby",  "nameAr": "رضع"   }
+        ]}
       ]
     },
     {
-      "id": 3,
-      "name": "Home & Living",
-      "nameAr": "المنزل والمعيشة",
-      "icon": "home",
-      "image": "🏠",
-      "productCount": 65,
+      "id": 3, "name": "Home & Living", "nameAr": "المنزل والمعيشة", "icon": "home", "image": "🏠", "productCount": 195,
       "subCategories": [
-        {
-          "id": 31,
-          "name": "Furniture",
-          "nameAr": "أثاث",
-          "childCategories": [
-            { "id": 311, "name": "Sofas",         "nameAr": "أرائك"         },
-            { "id": 312, "name": "Tables",        "nameAr": "طاولات"        },
-            { "id": 313, "name": "Beds",          "nameAr": "أسرّة"         }
-          ]
-        },
-        {
-          "id": 32,
-          "name": "Kitchen",
-          "nameAr": "مطبخ",
-          "childCategories": [
-            { "id": 321, "name": "Cookware",      "nameAr": "أواني طبخ"     },
-            { "id": 322, "name": "Appliances",    "nameAr": "أجهزة منزلية"  },
-            { "id": 323, "name": "Storage",       "nameAr": "تخزين"         }
-          ]
-        }
+        { "id": 31, "name": "Furniture", "nameAr": "أثاث", "childCategories": [
+            { "id": 311, "name": "Sofas",  "nameAr": "أرائك"  },
+            { "id": 312, "name": "Tables", "nameAr": "طاولات" },
+            { "id": 313, "name": "Beds",   "nameAr": "أسرّة"  }
+        ]},
+        { "id": 32, "name": "Kitchen", "nameAr": "مطبخ", "childCategories": [
+            { "id": 321, "name": "Cookware",    "nameAr": "أواني طبخ"    },
+            { "id": 322, "name": "Appliances",  "nameAr": "أجهزة منزلية" },
+            { "id": 323, "name": "Storage",     "nameAr": "تخزين"        }
+        ]},
+        { "id": 33, "name": "Decor", "nameAr": "ديكور", "childCategories": [
+            { "id": 331, "name": "Wall Art",  "nameAr": "فن جداري" },
+            { "id": 332, "name": "Lighting",  "nameAr": "إضاءة"    },
+            { "id": 333, "name": "Plants",    "nameAr": "نباتات"   }
+        ]}
       ]
     },
     {
-      "id": 4,
-      "name": "Sports",
-      "nameAr": "رياضة",
-      "icon": "dumbbell",
-      "image": "🏋️",
-      "productCount": 43,
+      "id": 4, "name": "Sports", "nameAr": "رياضة", "icon": "dumbbell", "image": "🏋️", "productCount": 143,
       "subCategories": [
-        {
-          "id": 41,
-          "name": "Fitness",
-          "nameAr": "لياقة بدنية",
-          "childCategories": [
-            { "id": 411, "name": "Gym Equipment", "nameAr": "معدات جيم"     },
-            { "id": 412, "name": "Yoga",          "nameAr": "يوغا"          },
-            { "id": 413, "name": "Cardio",        "nameAr": "كارديو"        }
-          ]
-        },
-        {
-          "id": 42,
-          "name": "Outdoor",
-          "nameAr": "رياضات خارجية",
-          "childCategories": [
-            { "id": 421, "name": "Running",       "nameAr": "جري"           },
-            { "id": 422, "name": "Cycling",       "nameAr": "دراجات"        },
-            { "id": 423, "name": "Swimming",      "nameAr": "سباحة"         }
-          ]
-        }
+        { "id": 41, "name": "Fitness", "nameAr": "لياقة بدنية", "childCategories": [
+            { "id": 411, "name": "Gym Equipment", "nameAr": "معدات جيم" },
+            { "id": 412, "name": "Yoga",          "nameAr": "يوغا"      },
+            { "id": 413, "name": "Cardio",        "nameAr": "كارديو"    }
+        ]},
+        { "id": 42, "name": "Outdoor", "nameAr": "رياضات خارجية", "childCategories": [
+            { "id": 421, "name": "Running",  "nameAr": "جري"     },
+            { "id": 422, "name": "Cycling",  "nameAr": "دراجات"  },
+            { "id": 423, "name": "Swimming", "nameAr": "سباحة"   }
+        ]},
+        { "id": 43, "name": "Team Sports", "nameAr": "رياضات جماعية", "childCategories": [
+            { "id": 431, "name": "Football",   "nameAr": "كرة قدم"  },
+            { "id": 432, "name": "Basketball", "nameAr": "كرة سلة"  },
+            { "id": 433, "name": "Tennis",     "nameAr": "تنس"      }
+        ]}
       ]
     },
     {
-      "id": 5,
-      "name": "Beauty",
-      "nameAr": "جمال",
-      "icon": "sparkles",
-      "image": "✨",
-      "productCount": 32,
+      "id": 5, "name": "Beauty", "nameAr": "جمال", "icon": "sparkles", "image": "✨", "productCount": 112,
       "subCategories": [
-        {
-          "id": 51,
-          "name": "Skincare",
-          "nameAr": "العناية بالبشرة",
-          "childCategories": [
-            { "id": 511, "name": "Moisturizers",  "nameAr": "مرطبات"        },
-            { "id": 512, "name": "Serums",        "nameAr": "سيروم"         },
-            { "id": 513, "name": "Sunscreen",     "nameAr": "واقي شمس"      }
-          ]
-        },
-        {
-          "id": 52,
-          "name": "Makeup",
-          "nameAr": "مكياج",
-          "childCategories": [
-            { "id": 521, "name": "Foundation",    "nameAr": "كريم أساس"     },
-            { "id": 522, "name": "Lipstick",      "nameAr": "أحمر شفاه"     },
-            { "id": 523, "name": "Eyeshadow",     "nameAr": "ظل عيون"       }
-          ]
-        }
+        { "id": 51, "name": "Skincare", "nameAr": "العناية بالبشرة", "childCategories": [
+            { "id": 511, "name": "Moisturizers", "nameAr": "مرطبات"    },
+            { "id": 512, "name": "Serums",       "nameAr": "سيروم"     },
+            { "id": 513, "name": "Sunscreen",    "nameAr": "واقي شمس"  }
+        ]},
+        { "id": 52, "name": "Makeup", "nameAr": "مكياج", "childCategories": [
+            { "id": 521, "name": "Foundation", "nameAr": "كريم أساس"  },
+            { "id": 522, "name": "Lipstick",   "nameAr": "أحمر شفاه"  },
+            { "id": 523, "name": "Eyeshadow",  "nameAr": "ظل عيون"    }
+        ]},
+        { "id": 53, "name": "Haircare", "nameAr": "العناية بالشعر", "childCategories": [
+            { "id": 531, "name": "Shampoo",     "nameAr": "شامبو"   },
+            { "id": 532, "name": "Conditioner", "nameAr": "بلسم"    },
+            { "id": 533, "name": "Styling",     "nameAr": "تصفيف"   }
+        ]}
       ]
     },
     {
-      "id": 6,
-      "name": "Books",
-      "nameAr": "كتب",
-      "icon": "book-open",
-      "image": "📚",
-      "productCount": 21,
+      "id": 6, "name": "Books", "nameAr": "كتب", "icon": "book-open", "image": "📚", "productCount": 87,
       "subCategories": [
-        {
-          "id": 61,
-          "name": "Fiction",
-          "nameAr": "روايات",
-          "childCategories": [
-            { "id": 611, "name": "Novels",        "nameAr": "روايات"        },
+        { "id": 61, "name": "Fiction", "nameAr": "روايات", "childCategories": [
+            { "id": 611, "name": "Novels",         "nameAr": "روايات"       },
             { "id": 612, "name": "Science Fiction","nameAr": "خيال علمي"    },
-            { "id": 613, "name": "Mystery",       "nameAr": "غموض وتشويق"   }
-          ]
-        },
-        {
-          "id": 62,
-          "name": "Non-Fiction",
-          "nameAr": "غير روائي",
-          "childCategories": [
-            { "id": 621, "name": "Self Help",     "nameAr": "تطوير الذات"   },
-            { "id": 622, "name": "Business",      "nameAr": "أعمال"         },
-            { "id": 623, "name": "History",       "nameAr": "تاريخ"         }
-          ]
-        }
+            { "id": 613, "name": "Mystery",        "nameAr": "غموض وتشويق" }
+        ]},
+        { "id": 62, "name": "Non-Fiction", "nameAr": "غير روائي", "childCategories": [
+            { "id": 621, "name": "Self Help", "nameAr": "تطوير الذات" },
+            { "id": 622, "name": "Business",  "nameAr": "أعمال"       },
+            { "id": 623, "name": "History",   "nameAr": "تاريخ"       }
+        ]}
       ]
     }
   ],
 
   "products": [
-    {
-      "id": 1,
-      "name": "Wireless Headphones Pro",
-      "nameAr": "سماعات لاسلكية برو",
-      "description": "Premium wireless headphones with active noise cancellation, 30-hour battery life, and studio-quality sound. Perfect for music lovers and professionals.",
-      "descriptionAr": "سماعات لاسلكية فاخرة مع إلغاء الضوضاء النشط، وعمر بطارية 30 ساعة، وصوت بجودة الاستوديو. مثالية لعشاق الموسيقى والمحترفين.",
-      "price": 129.99,
-      "originalPrice": 179.99,
-      "rating": 4.8,
-      "reviews": 2341,
-      "category": "Electronics",
-      "categoryId": 1,
-      "subCategoryId": 13,
-      "childCategoryId": 131,
-      "image": "🎧",
-      "images": ["🎧", "🎧", "🎧"],
-      "badge": "Hot",
-      "sku": "EL-HP-001",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 45,
-      "isBestSeller": true,
-      "isNew": false,
-      "tags": ["wireless", "headphones", "audio", "noise-cancelling"],
-      "dataSheet": "/sheets/headphones-pro.pdf",
-      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "createdAt": "2024-01-15"
-    },
-    {
-      "id": 2,
-      "name": "Leather Jacket Classic",
-      "nameAr": "جاكيت جلد كلاسيك",
-      "description": "Genuine leather jacket with a timeless design. Features a soft inner lining, multiple pockets, and durable YKK zippers.",
-      "descriptionAr": "جاكيت جلد حقيقي بتصميم خالد. يتميز بطانة داخلية ناعمة، وجيوب متعددة، وسحابات YKK المتينة.",
-      "price": 89.99,
-      "originalPrice": 120.00,
-      "rating": 4.6,
-      "reviews": 987,
-      "category": "Fashion",
-      "categoryId": 2,
-      "subCategoryId": 21,
-      "childCategoryId": 211,
-      "image": "🧥",
-      "images": ["🧥", "🧥", "🧥"],
-      "badge": "Sale",
-      "sku": "FA-JK-002",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 18,
-      "isBestSeller": true,
-      "isNew": false,
-      "tags": ["leather", "jacket", "fashion", "men"],
-      "dataSheet": null,
-      "video": null,
-      "createdAt": "2024-02-10"
-    },
-    {
-      "id": 3,
-      "name": "Smart Coffee Maker",
-      "nameAr": "ماكينة قهوة ذكية",
-      "description": "Wi-Fi enabled coffee maker you can control from your phone. Programmable brewing, keep-warm function, and built-in grinder.",
-      "descriptionAr": "ماكينة قهوة تعمل بالواي فاي يمكنك التحكم بها من هاتفك. تحضير مبرمج، ووظيفة الإبقاء دافئاً، وطاحونة مدمجة.",
-      "price": 59.99,
-      "originalPrice": 59.99,
-      "rating": 4.7,
-      "reviews": 1567,
-      "category": "Home & Living",
-      "categoryId": 3,
-      "subCategoryId": 32,
-      "childCategoryId": 322,
-      "image": "☕",
-      "images": ["☕", "☕", "☕"],
-      "badge": "New",
-      "sku": "HM-CF-003",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 30,
-      "isBestSeller": true,
-      "isNew": true,
-      "tags": ["coffee", "smart", "kitchen", "appliance"],
-      "dataSheet": "/sheets/coffee-maker.pdf",
-      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "createdAt": "2024-03-01"
-    },
-    {
-      "id": 4,
-      "name": "Running Shoes Elite",
-      "nameAr": "حذاء ركض إيليت",
-      "description": "Professional running shoes with advanced cushioning technology, breathable mesh upper, and anti-slip rubber sole.",
-      "descriptionAr": "أحذية ركض احترافية بتقنية تبطين متقدمة، وجزء علوي شبكي قابل للتنفس، ونعل مطاطي مانع للانزلاق.",
-      "price": 99.99,
-      "originalPrice": 130.00,
-      "rating": 4.9,
-      "reviews": 3210,
-      "category": "Sports",
-      "categoryId": 4,
-      "subCategoryId": 42,
-      "childCategoryId": 421,
-      "image": "👟",
-      "images": ["👟", "👟", "👟"],
-      "badge": "Hot",
-      "sku": "SP-SH-004",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 60,
-      "isBestSeller": true,
-      "isNew": false,
-      "tags": ["running", "shoes", "sports", "fitness"],
-      "dataSheet": null,
-      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "createdAt": "2024-01-20"
-    },
-    {
-      "id": 5,
-      "name": "Vitamin C Serum",
-      "nameAr": "سيروم فيتامين سي",
-      "description": "Brightening Vitamin C serum with 20% ascorbic acid, hyaluronic acid, and vitamin E. Reduces dark spots and boosts collagen.",
-      "descriptionAr": "سيروم فيتامين سي المضيء مع 20% حمض الأسكوربيك، وحمض الهيالورونيك، وفيتامين E. يقلل البقع الداكنة ويعزز الكولاجين.",
-      "price": 34.99,
-      "originalPrice": 34.99,
-      "rating": 4.5,
-      "reviews": 765,
-      "category": "Beauty",
-      "categoryId": 5,
-      "subCategoryId": 51,
-      "childCategoryId": 512,
-      "image": "🧴",
-      "images": ["🧴", "🧴", "🧴"],
-      "badge": null,
-      "sku": "BE-SR-005",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 25,
-      "isBestSeller": false,
-      "isNew": false,
-      "tags": ["serum", "vitamin-c", "skincare", "beauty"],
-      "dataSheet": "/sheets/vitamin-c-serum.pdf",
-      "video": null,
-      "createdAt": "2024-02-05"
-    },
-    {
-      "id": 6,
-      "name": "Design Thinking Book",
-      "nameAr": "كتاب تفكير التصميم",
-      "description": "A comprehensive guide to design thinking methodology. Learn how to solve complex problems creatively and build user-centered products.",
-      "descriptionAr": "دليل شامل لمنهجية التفكير التصميمي. تعلم كيفية حل المشكلات المعقدة بشكل إبداعي وبناء منتجات تتمحور حول المستخدم.",
-      "price": 24.99,
-      "originalPrice": 35.00,
-      "rating": 4.4,
-      "reviews": 432,
-      "category": "Books",
-      "categoryId": 6,
-      "subCategoryId": 62,
-      "childCategoryId": 622,
-      "image": "📖",
-      "images": ["📖", "📖", "📖"],
-      "badge": "New",
-      "sku": "BK-DT-006",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 50,
-      "isBestSeller": false,
-      "isNew": true,
-      "tags": ["design", "book", "business", "creativity"],
-      "dataSheet": null,
-      "video": null,
-      "createdAt": "2024-03-10"
-    },
-    {
-      "id": 7,
-      "name": "Mechanical Keyboard",
-      "nameAr": "كيبورد ميكانيكي",
-      "description": "TKL mechanical keyboard with Cherry MX switches, RGB backlighting, and aluminum frame. Perfect for gaming and typing.",
-      "descriptionAr": "كيبورد ميكانيكي TKL مع مفاتيح Cherry MX، وإضاءة خلفية RGB، وإطار من الألومنيوم. مثالي للألعاب والكتابة.",
-      "price": 149.99,
-      "originalPrice": 149.99,
-      "rating": 4.8,
-      "reviews": 1890,
-      "category": "Electronics",
-      "categoryId": 1,
-      "subCategoryId": 12,
-      "childCategoryId": 121,
-      "image": "⌨️",
-      "images": ["⌨️", "⌨️", "⌨️"],
-      "badge": null,
-      "sku": "EL-KB-007",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 35,
-      "isBestSeller": true,
-      "isNew": false,
-      "tags": ["keyboard", "mechanical", "gaming", "electronics"],
-      "dataSheet": "/sheets/mechanical-keyboard.pdf",
-      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "createdAt": "2024-01-25"
-    },
-    {
-      "id": 8,
-      "name": "Yoga Mat Premium",
-      "nameAr": "مات يوغا بريميوم",
-      "description": "Extra-thick 6mm non-slip yoga mat made from eco-friendly TPE material. Includes carrying strap and alignment lines.",
-      "descriptionAr": "حصيرة يوغا سميكة 6 مم مانعة للانزلاق مصنوعة من مادة TPE الصديقة للبيئة. تشمل حزام حمل وخطوط محاذاة.",
-      "price": 44.99,
-      "originalPrice": 60.00,
-      "rating": 4.6,
-      "reviews": 654,
-      "category": "Sports",
-      "categoryId": 4,
-      "subCategoryId": 41,
-      "childCategoryId": 412,
-      "image": "🧘",
-      "images": ["🧘", "🧘", "🧘"],
-      "badge": "Sale",
-      "sku": "SP-YM-008",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 40,
-      "isBestSeller": true,
-      "isNew": false,
-      "tags": ["yoga", "mat", "fitness", "sports"],
-      "dataSheet": null,
-      "video": null,
-      "createdAt": "2024-02-18"
-    },
-    {
-      "id": 9,
-      "name": "iPhone 15 Pro",
-      "nameAr": "آيفون 15 برو",
-      "description": "The latest iPhone with A17 Pro chip, titanium design, 48MP camera system, and USB-C connectivity.",
-      "descriptionAr": "أحدث آيفون مع شريحة A17 Pro، وتصميم من التيتانيوم، ونظام كاميرا 48 ميغابكسل، واتصال USB-C.",
-      "price": 999.99,
-      "originalPrice": 999.99,
-      "rating": 4.9,
-      "reviews": 5421,
-      "category": "Electronics",
-      "categoryId": 1,
-      "subCategoryId": 11,
-      "childCategoryId": 111,
-      "image": "📱",
-      "images": ["📱", "📱", "📱"],
-      "badge": "Hot",
-      "sku": "EL-IP-009",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 20,
-      "isBestSeller": true,
-      "isNew": true,
-      "tags": ["iphone", "smartphone", "apple", "electronics"],
-      "dataSheet": "/sheets/iphone-15-pro.pdf",
-      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "createdAt": "2024-03-15"
-    },
-    {
-      "id": 10,
-      "name": "Summer Floral Dress",
-      "nameAr": "فستان زهري صيفي",
-      "description": "Light and breezy floral dress perfect for summer outings. Made from 100% cotton with a relaxed fit.",
-      "descriptionAr": "فستان زهري خفيف ومنعش مثالي للنزهات الصيفية. مصنوع من 100% قطن بقصة مريحة.",
-      "price": 49.99,
-      "originalPrice": 69.99,
-      "rating": 4.3,
-      "reviews": 321,
-      "category": "Fashion",
-      "categoryId": 2,
-      "subCategoryId": 22,
-      "childCategoryId": 221,
-      "image": "👗",
-      "images": ["👗", "👗", "👗"],
-      "badge": "Sale",
-      "sku": "FA-DR-010",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 22,
-      "isBestSeller": false,
-      "isNew": false,
-      "tags": ["dress", "summer", "fashion", "women"],
-      "dataSheet": null,
-      "video": null,
-      "createdAt": "2024-02-28"
-    },
-    {
-      "id": 11,
-      "name": "4K Smart TV 55\"",
-      "nameAr": "تلفزيون ذكي 4K 55 بوصة",
-      "description": "55-inch 4K OLED Smart TV with HDR10+, Dolby Atmos, and built-in streaming apps.",
-      "descriptionAr": "تلفزيون ذكي OLED 4K مقاس 55 بوصة مع HDR10+ ودولبي أتموس وتطبيقات بث مدمجة.",
-      "price": 799.99,
-      "originalPrice": 999.99,
-      "rating": 4.7,
-      "reviews": 1234,
-      "category": "Electronics",
-      "categoryId": 1,
-      "subCategoryId": 12,
-      "childCategoryId": 123,
-      "image": "📺",
-      "images": ["📺", "📺", "📺"],
-      "badge": "Sale",
-      "sku": "EL-TV-011",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 12,
-      "isBestSeller": true,
-      "isNew": false,
-      "tags": ["tv", "4k", "smart", "electronics"],
-      "dataSheet": "/sheets/4k-tv.pdf",
-      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      "createdAt": "2024-01-30"
-    },
-    {
-      "id": 12,
-      "name": "Moisturizing Face Cream",
-      "nameAr": "كريم وجه مرطب",
-      "description": "Deep moisturizing face cream with hyaluronic acid, ceramides, and niacinamide. Suitable for all skin types.",
-      "descriptionAr": "كريم وجه مرطب عميق مع حمض الهيالورونيك والسيراميدات والنياسيناميد. مناسب لجميع أنواع البشرة.",
-      "price": 28.99,
-      "originalPrice": 28.99,
-      "rating": 4.5,
-      "reviews": 543,
-      "category": "Beauty",
-      "categoryId": 5,
-      "subCategoryId": 51,
-      "childCategoryId": 511,
-      "image": "🧴",
-      "images": ["🧴", "🧴", "🧴"],
-      "badge": "New",
-      "sku": "BE-FC-012",
-      "availability": "In Stock",
-      "availabilityAr": "متوفر",
-      "stock": 60,
-      "isBestSeller": false,
-      "isNew": true,
-      "tags": ["moisturizer", "face-cream", "skincare", "beauty"],
-      "dataSheet": "/sheets/face-cream.pdf",
-      "video": null,
-      "createdAt": "2024-03-05"
-    }
+    { "id": 1,  "name": "Wireless Headphones Pro",   "nameAr": "سماعات لاسلكية برو",        "description": "Premium wireless headphones with active noise cancellation, 30-hour battery life, and studio-quality sound.", "descriptionAr": "سماعات لاسلكية فاخرة مع إلغاء الضوضاء النشط وعمر بطارية 30 ساعة وصوت بجودة الاستوديو.", "price": 129.99, "originalPrice": 179.99, "rating": 4.8, "reviews": 2341, "category": "Electronics", "categoryId": 1, "subCategoryId": 13, "childCategoryId": 131, "image": "🎧", "images": ["🎧","🎧","🎧"], "badge": "Hot",  "sku": "EL-HP-001", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 45,  "isBestSeller": true,  "isNew": false, "tags": ["wireless","headphones","audio","noise-cancelling"], "dataSheet": "/sheets/headphones-pro.pdf",    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-01-15" },
+    { "id": 2,  "name": "Leather Jacket Classic",     "nameAr": "جاكيت جلد كلاسيك",         "description": "Genuine leather jacket with a timeless design, soft inner lining, multiple pockets, and durable YKK zippers.", "descriptionAr": "جاكيت جلد حقيقي بتصميم خالد مع بطانة داخلية ناعمة وجيوب متعددة وسحابات YKK.", "price": 89.99,  "originalPrice": 120.00, "rating": 4.6, "reviews": 987,  "category": "Fashion",      "categoryId": 2, "subCategoryId": 21, "childCategoryId": 214, "image": "🧥", "images": ["🧥","🧥","🧥"], "badge": "Sale", "sku": "FA-JK-002", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 18,  "isBestSeller": true,  "isNew": false, "tags": ["leather","jacket","fashion","men"],                   "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-10" },
+    { "id": 3,  "name": "Smart Coffee Maker",         "nameAr": "ماكينة قهوة ذكية",          "description": "Wi-Fi enabled coffee maker you can control from your phone. Programmable brewing and built-in grinder.",       "descriptionAr": "ماكينة قهوة بالواي فاي يمكنك التحكم بها من هاتفك مع تحضير مبرمج وطاحونة مدمجة.", "price": 59.99,  "originalPrice": 59.99,  "rating": 4.7, "reviews": 1567, "category": "Home & Living","categoryId": 3, "subCategoryId": 32, "childCategoryId": 322, "image": "☕", "images": ["☕","☕","☕"], "badge": "New",  "sku": "HM-CF-003", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 30,  "isBestSeller": true,  "isNew": true,  "tags": ["coffee","smart","kitchen","appliance"],               "dataSheet": "/sheets/coffee-maker.pdf",       "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-03-01" },
+    { "id": 4,  "name": "Running Shoes Elite",        "nameAr": "حذاء ركض إيليت",            "description": "Professional running shoes with advanced cushioning, breathable mesh upper, and anti-slip rubber sole.",      "descriptionAr": "أحذية ركض احترافية بتقنية تبطين متقدمة وجزء علوي شبكي ونعل مطاطي مانع للانزلاق.", "price": 99.99,  "originalPrice": 130.00, "rating": 4.9, "reviews": 3210, "category": "Sports",       "categoryId": 4, "subCategoryId": 42, "childCategoryId": 421, "image": "👟", "images": ["👟","👟","👟"], "badge": "Hot",  "sku": "SP-SH-004", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 60,  "isBestSeller": true,  "isNew": false, "tags": ["running","shoes","sports","fitness"],                "dataSheet": null,                             "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-01-20" },
+    { "id": 5,  "name": "Vitamin C Serum",            "nameAr": "سيروم فيتامين سي",           "description": "Brightening Vitamin C serum with 20% ascorbic acid, hyaluronic acid, and vitamin E. Reduces dark spots.",   "descriptionAr": "سيروم فيتامين سي المضيء مع 20% حمض الأسكوربيك يقلل البقع الداكنة.", "price": 34.99,  "originalPrice": 34.99,  "rating": 4.5, "reviews": 765,  "category": "Beauty",       "categoryId": 5, "subCategoryId": 51, "childCategoryId": 512, "image": "🧴", "images": ["🧴","🧴","🧴"], "badge": null,   "sku": "BE-SR-005", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 25,  "isBestSeller": false, "isNew": false, "tags": ["serum","vitamin-c","skincare","beauty"],              "dataSheet": "/sheets/vitamin-c-serum.pdf",    "video": null,                                        "createdAt": "2024-02-05" },
+    { "id": 6,  "name": "Design Thinking Book",       "nameAr": "كتاب تفكير التصميم",         "description": "A comprehensive guide to design thinking methodology. Learn how to solve complex problems creatively.",        "descriptionAr": "دليل شامل لمنهجية التفكير التصميمي لحل المشكلات المعقدة بشكل إبداعي.", "price": 24.99,  "originalPrice": 35.00,  "rating": 4.4, "reviews": 432,  "category": "Books",        "categoryId": 6, "subCategoryId": 62, "childCategoryId": 622, "image": "📖", "images": ["📖","📖","📖"], "badge": "New",  "sku": "BK-DT-006", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 50,  "isBestSeller": false, "isNew": true,  "tags": ["design","book","business","creativity"],              "dataSheet": null,                             "video": null,                                        "createdAt": "2024-03-10" },
+    { "id": 7,  "name": "Mechanical Keyboard",        "nameAr": "كيبورد ميكانيكي",            "description": "TKL mechanical keyboard with Cherry MX switches, RGB backlighting, and aluminum frame.",                    "descriptionAr": "كيبورد ميكانيكي TKL مع مفاتيح Cherry MX وإضاءة RGB وإطار من الألومنيوم.", "price": 149.99, "originalPrice": 149.99, "rating": 4.8, "reviews": 1890, "category": "Electronics", "categoryId": 1, "subCategoryId": 12, "childCategoryId": 121, "image": "⌨️","images": ["⌨️","⌨️","⌨️"],"badge": null,   "sku": "EL-KB-007", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 35,  "isBestSeller": true,  "isNew": false, "tags": ["keyboard","mechanical","gaming","electronics"],       "dataSheet": "/sheets/mechanical-keyboard.pdf","video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-01-25" },
+    { "id": 8,  "name": "Yoga Mat Premium",           "nameAr": "مات يوغا بريميوم",           "description": "Extra-thick 6mm non-slip yoga mat made from eco-friendly TPE material with carrying strap.",                 "descriptionAr": "حصيرة يوغا سميكة 6 مم مانعة للانزلاق من مادة TPE الصديقة للبيئة مع حزام حمل.", "price": 44.99,  "originalPrice": 60.00,  "rating": 4.6, "reviews": 654,  "category": "Sports",       "categoryId": 4, "subCategoryId": 41, "childCategoryId": 412, "image": "🧘", "images": ["🧘","🧘","🧘"], "badge": "Sale", "sku": "SP-YM-008", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 40,  "isBestSeller": true,  "isNew": false, "tags": ["yoga","mat","fitness","sports"],                      "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-18" },
+    { "id": 9,  "name": "iPhone 15 Pro",              "nameAr": "آيفون 15 برو",               "description": "The latest iPhone with A17 Pro chip, titanium design, 48MP camera system, and USB-C connectivity.",          "descriptionAr": "أحدث آيفون مع شريحة A17 Pro وتصميم التيتانيوم ونظام كاميرا 48 ميغابكسل.", "price": 999.99, "originalPrice": 999.99, "rating": 4.9, "reviews": 5421, "category": "Electronics", "categoryId": 1, "subCategoryId": 11, "childCategoryId": 111, "image": "📱", "images": ["📱","📱","📱"], "badge": "Hot",  "sku": "EL-IP-009", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 20,  "isBestSeller": true,  "isNew": true,  "tags": ["iphone","smartphone","apple","electronics"],          "dataSheet": "/sheets/iphone-15-pro.pdf",      "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-03-15" },
+    { "id": 10, "name": "Summer Floral Dress",        "nameAr": "فستان زهري صيفي",            "description": "Light and breezy floral dress perfect for summer outings. Made from 100% cotton with a relaxed fit.",        "descriptionAr": "فستان زهري خفيف ومنعش مثالي للنزهات الصيفية مصنوع من 100% قطن.", "price": 49.99,  "originalPrice": 69.99,  "rating": 4.3, "reviews": 321,  "category": "Fashion",      "categoryId": 2, "subCategoryId": 22, "childCategoryId": 221, "image": "👗", "images": ["👗","👗","👗"], "badge": "Sale", "sku": "FA-DR-010", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 22,  "isBestSeller": false, "isNew": false, "tags": ["dress","summer","fashion","women"],                   "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-28" },
+    { "id": 11, "name": "4K Smart TV 55\"",           "nameAr": "تلفزيون ذكي 4K 55 بوصة",    "description": "55-inch 4K OLED Smart TV with HDR10+, Dolby Atmos, and built-in streaming apps.",                           "descriptionAr": "تلفزيون ذكي OLED 4K 55 بوصة مع HDR10+ ودولبي أتموس وتطبيقات بث مدمجة.", "price": 799.99, "originalPrice": 999.99, "rating": 4.7, "reviews": 1234, "category": "Electronics", "categoryId": 1, "subCategoryId": 12, "childCategoryId": 123, "image": "📺", "images": ["📺","📺","📺"], "badge": "Sale", "sku": "EL-TV-011", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 12,  "isBestSeller": true,  "isNew": false, "tags": ["tv","4k","smart","electronics"],                      "dataSheet": "/sheets/4k-tv.pdf",              "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-01-30" },
+    { "id": 12, "name": "Moisturizing Face Cream",    "nameAr": "كريم وجه مرطب",              "description": "Deep moisturizing face cream with hyaluronic acid, ceramides, and niacinamide. For all skin types.",          "descriptionAr": "كريم وجه مرطب عميق مع حمض الهيالورونيك والسيراميدات مناسب لجميع أنواع البشرة.", "price": 28.99,  "originalPrice": 28.99,  "rating": 4.5, "reviews": 543,  "category": "Beauty",       "categoryId": 5, "subCategoryId": 51, "childCategoryId": 511, "image": "🧴", "images": ["🧴","🧴","🧴"], "badge": "New",  "sku": "BE-FC-012", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 60,  "isBestSeller": false, "isNew": true,  "tags": ["moisturizer","face-cream","skincare","beauty"],       "dataSheet": "/sheets/face-cream.pdf",         "video": null,                                        "createdAt": "2024-03-05" },
+    { "id": 13, "name": "MacBook Air M3",             "nameAr": "ماك بوك إير M3",             "description": "Apple MacBook Air with M3 chip, 15-inch Liquid Retina display, 18-hour battery life, and fanless design.",  "descriptionAr": "ماك بوك إير بشريحة M3 وشاشة Liquid Retina 15 بوصة وبطارية 18 ساعة.", "price": 1299.99,"originalPrice": 1299.99,"rating": 4.9, "reviews": 3876, "category": "Electronics", "categoryId": 1, "subCategoryId": 12, "childCategoryId": 121, "image": "💻", "images": ["💻","💻","💻"], "badge": "Hot",  "sku": "EL-MB-013", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 15,  "isBestSeller": true,  "isNew": true,  "tags": ["macbook","laptop","apple","computer"],                "dataSheet": "/sheets/macbook-m3.pdf",         "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-03-20" },
+    { "id": 14, "name": "Sony WH-1000XM5",            "nameAr": "سماعات سوني WH-1000XM5",     "description": "Industry-leading noise cancellation with 8 mics, 30hr battery, and multipoint connection.",                 "descriptionAr": "إلغاء ضوضاء رائد في الصناعة مع 8 ميكروفونات وبطارية 30 ساعة.", "price": 279.99, "originalPrice": 349.99, "rating": 4.8, "reviews": 2109, "category": "Electronics", "categoryId": 1, "subCategoryId": 13, "childCategoryId": 131, "image": "🎧", "images": ["🎧","🎧","🎧"], "badge": "Sale", "sku": "EL-SN-014", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 28,  "isBestSeller": true,  "isNew": false, "tags": ["sony","headphones","noise-cancelling","audio"],       "dataSheet": "/sheets/sony-xm5.pdf",           "video": null,                                        "createdAt": "2024-02-01" },
+    { "id": 15, "name": "Gaming Chair Pro",           "nameAr": "كرسي جيمنج برو",             "description": "Ergonomic gaming chair with lumbar support, adjustable armrests, and recline up to 165°.",                  "descriptionAr": "كرسي جيمنج مريح مع دعم قطني ومساند ذراع قابلة للتعديل وانحناء حتى 165°.", "price": 249.99, "originalPrice": 320.00, "rating": 4.5, "reviews": 876,  "category": "Home & Living","categoryId": 3, "subCategoryId": 31, "childCategoryId": 311, "image": "🪑", "images": ["🪑","🪑","🪑"], "badge": "Sale", "sku": "HM-GC-015", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 22,  "isBestSeller": false, "isNew": false, "tags": ["gaming","chair","furniture","ergonomic"],             "dataSheet": null,                             "video": null,                                        "createdAt": "2024-01-10" },
+    { "id": 16, "name": "Air Fryer XL 6.5L",         "nameAr": "قلاية هوائية XL 6.5 لتر",   "description": "Large 6.5L air fryer with 8 preset cooking programs, digital display, and 80% less oil.",                   "descriptionAr": "قلاية هوائية كبيرة 6.5 لتر مع 8 برامج طبخ محددة مسبقاً وتوفير 80% من الزيت.", "price": 89.99,  "originalPrice": 119.99, "rating": 4.7, "reviews": 1432, "category": "Home & Living","categoryId": 3, "subCategoryId": 32, "childCategoryId": 322, "image": "🍳", "images": ["🍳","🍳","🍳"], "badge": "Hot",  "sku": "HM-AF-016", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 33,  "isBestSeller": true,  "isNew": false, "tags": ["air-fryer","kitchen","cooking","appliance"],          "dataSheet": "/sheets/air-fryer.pdf",          "video": null,                                        "createdAt": "2024-02-12" },
+    { "id": 17, "name": "Football Pro Match",         "nameAr": "كرة قدم برو ماتش",           "description": "FIFA approved match football with thermally bonded panels and all-weather performance.",                      "descriptionAr": "كرة قدم معتمدة من فيفا مع ألواح مربوطة حرارياً وأداء في جميع الأحوال الجوية.", "price": 39.99,  "originalPrice": 55.00,  "rating": 4.6, "reviews": 543,  "category": "Sports",       "categoryId": 4, "subCategoryId": 43, "childCategoryId": 431, "image": "⚽", "images": ["⚽","⚽","⚽"], "badge": "Sale", "sku": "SP-FB-017", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 75,  "isBestSeller": false, "isNew": false, "tags": ["football","sports","outdoor","fitness"],              "dataSheet": null,                             "video": null,                                        "createdAt": "2024-01-05" },
+    { "id": 18, "name": "Retinol Night Cream",        "nameAr": "كريم ريتينول الليلي",         "description": "Advanced retinol night cream with 0.3% retinol, peptides, and shea butter. Reduces wrinkles.",              "descriptionAr": "كريم ريتينول ليلي متقدم مع 0.3% ريتينول وببتيدات وزبدة الشيا لتقليل التجاعيد.", "price": 42.99,  "originalPrice": 42.99,  "rating": 4.6, "reviews": 389,  "category": "Beauty",       "categoryId": 5, "subCategoryId": 51, "childCategoryId": 511, "image": "🌙", "images": ["🌙","🌙","🌙"], "badge": "New",  "sku": "BE-RC-018", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 45,  "isBestSeller": false, "isNew": true,  "tags": ["retinol","night-cream","skincare","anti-aging"],      "dataSheet": "/sheets/retinol-cream.pdf",      "video": null,                                        "createdAt": "2024-03-08" },
+    { "id": 19, "name": "Atomic Habits",              "nameAr": "كتاب العادات الذرية",         "description": "James Clear's #1 NYT bestseller. A proven framework for building good habits and breaking bad ones.",        "descriptionAr": "الأكثر مبيعاً في نيويورك تايمز. إطار مثبت لبناء عادات جيدة وكسر العادات السيئة.", "price": 18.99,  "originalPrice": 25.00,  "rating": 4.9, "reviews": 8765, "category": "Books",        "categoryId": 6, "subCategoryId": 62, "childCategoryId": 621, "image": "📗", "images": ["📗","📗","📗"], "badge": "Hot",  "sku": "BK-AH-019", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 100, "isBestSeller": true,  "isNew": false, "tags": ["habits","self-help","productivity","book"],           "dataSheet": null,                             "video": null,                                        "createdAt": "2024-01-02" },
+    { "id": 20, "name": "PS5 DualSense Controller",  "nameAr": "يد تحكم PS5 DualSense",      "description": "PlayStation 5 DualSense wireless controller with haptic feedback and adaptive triggers.",                    "descriptionAr": "يد تحكم PlayStation 5 اللاسلكية مع ردود فعل لمسية ومشغلات تكيفية.", "price": 69.99,  "originalPrice": 69.99,  "rating": 4.8, "reviews": 2987, "category": "Electronics", "categoryId": 1, "subCategoryId": 14, "childCategoryId": 142, "image": "🎮", "images": ["🎮","🎮","🎮"], "badge": null,   "sku": "EL-PS-020", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 55,  "isBestSeller": true,  "isNew": false, "tags": ["ps5","controller","gaming","playstation"],            "dataSheet": null,                             "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-01-18" },
+    { "id": 21, "name": "Men's Slim Fit Chinos",      "nameAr": "بنطلون تشينو رجالي سليم فيت","description": "Stretch cotton chinos with slim fit cut, five-pocket design, and wrinkle-resistant fabric.",                "descriptionAr": "بنطلون تشينو من القطن المرن بقصة سليم وخمسة جيوب وقماش مقاوم للتجعد.", "price": 44.99,  "originalPrice": 59.99,  "rating": 4.4, "reviews": 267,  "category": "Fashion",      "categoryId": 2, "subCategoryId": 21, "childCategoryId": 212, "image": "👖", "images": ["👖","👖","👖"], "badge": "Sale", "sku": "FA-CH-021", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 38,  "isBestSeller": false, "isNew": false, "tags": ["chinos","pants","men","fashion"],                     "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-22" },
+    { "id": 22, "name": "Resistance Bands Set",       "nameAr": "مجموعة أربطة مقاومة",        "description": "Set of 5 resistance bands (10-50 lbs) with handles, door anchor, ankle straps, and carry bag.",            "descriptionAr": "مجموعة من 5 أربطة مقاومة (10-50 رطل) مع مقابض وربط باب وأشرطة كاحل.", "price": 29.99,  "originalPrice": 45.00,  "rating": 4.5, "reviews": 891,  "category": "Sports",       "categoryId": 4, "subCategoryId": 41, "childCategoryId": 411, "image": "💪", "images": ["💪","💪","💪"], "badge": "Sale", "sku": "SP-RB-022", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 80,  "isBestSeller": false, "isNew": false, "tags": ["resistance-bands","gym","fitness","workout"],         "dataSheet": null,                             "video": null,                                        "createdAt": "2024-01-28" },
+    { "id": 23, "name": "LED Desk Lamp Smart",        "nameAr": "مصباح مكتب LED ذكي",         "description": "Smart LED desk lamp with USB charging port, 5 color temperatures, 10 brightness levels, touch control.",    "descriptionAr": "مصباح مكتب LED ذكي مع منفذ شحن USB و5 درجات حرارة لونية و10 مستويات سطوع.", "price": 49.99,  "originalPrice": 65.00,  "rating": 4.6, "reviews": 432,  "category": "Home & Living","categoryId": 3, "subCategoryId": 33, "childCategoryId": 332, "image": "💡", "images": ["💡","💡","💡"], "badge": "New",  "sku": "HM-LD-023", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 45,  "isBestSeller": false, "isNew": true,  "tags": ["lamp","lighting","desk","smart-home"],                "dataSheet": null,                             "video": null,                                        "createdAt": "2024-03-12" },
+    { "id": 24, "name": "Hair Dryer Pro 2400W",       "nameAr": "مجفف شعر برو 2400 واط",      "description": "Professional 2400W hair dryer with ionic technology, 3 heat settings, and cool shot button.",              "descriptionAr": "مجفف شعر احترافي 2400 واط بتقنية الأيونات و3 إعدادات حرارة.", "price": 59.99,  "originalPrice": 80.00,  "rating": 4.5, "reviews": 678,  "category": "Beauty",       "categoryId": 5, "subCategoryId": 53, "childCategoryId": 533, "image": "💇", "images": ["💇","💇","💇"], "badge": "Sale", "sku": "BE-HD-024", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 32,  "isBestSeller": false, "isNew": false, "tags": ["hair-dryer","haircare","beauty","styling"],           "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-08" },
+    { "id": 25, "name": "Clean Code Book",            "nameAr": "كتاب الكود النظيف",           "description": "Robert C. Martin's guide to writing clean, maintainable code. Essential for every software developer.",       "descriptionAr": "دليل روبرت مارتن لكتابة كود نظيف وقابل للصيانة لكل مطور برمجيات.", "price": 39.99,  "originalPrice": 49.99,  "rating": 4.7, "reviews": 3421, "category": "Books",        "categoryId": 6, "subCategoryId": 62, "childCategoryId": 622, "image": "📘", "images": ["📘","📘","📘"], "badge": null,   "sku": "BK-CC-025", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 60,  "isBestSeller": true,  "isNew": false, "tags": ["programming","coding","book","software"],             "dataSheet": null,                             "video": null,                                        "createdAt": "2024-01-08" },
+    { "id": 26, "name": "Smart Watch Series 9",       "nameAr": "ساعة ذكية سيريز 9",          "description": "Advanced smartwatch with health monitoring, GPS, 18-hour battery, and always-on display.",                 "descriptionAr": "ساعة ذكية متقدمة مع مراقبة الصحة وGPS وبطارية 18 ساعة وشاشة دائمة التشغيل.", "price": 399.99, "originalPrice": 449.99, "rating": 4.8, "reviews": 4532, "category": "Electronics", "categoryId": 1, "subCategoryId": 11, "childCategoryId": 113, "image": "⌚", "images": ["⌚","⌚","⌚"], "badge": "Hot",  "sku": "EL-SW-026", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 25,  "isBestSeller": true,  "isNew": true,  "tags": ["smartwatch","wearable","fitness-tracker","electronics"],"dataSheet": "/sheets/smartwatch.pdf",        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ", "createdAt": "2024-03-18" },
+    { "id": 27, "name": "Women's Luxury Handbag",     "nameAr": "حقيبة نسائية فاخرة",         "description": "Premium vegan leather handbag with gold-tone hardware, multiple compartments, detachable strap.",           "descriptionAr": "حقيبة يد نسائية من الجلد النباتي الفاخر مع أجهزة ذهبية وأقسام متعددة.", "price": 119.99, "originalPrice": 159.99, "rating": 4.5, "reviews": 445,  "category": "Fashion",      "categoryId": 2, "subCategoryId": 22, "childCategoryId": 223, "image": "👜", "images": ["👜","👜","👜"], "badge": "Sale", "sku": "FA-HB-027", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 16,  "isBestSeller": false, "isNew": false, "tags": ["handbag","women","fashion","luxury"],                 "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-14" },
+    { "id": 28, "name": "Bluetooth Speaker 360°",     "nameAr": "سبيكر بلوتوث 360 درجة",      "description": "360-degree surround sound speaker, IPX7 waterproof, 20-hour battery, built-in voice assistant.",           "descriptionAr": "مكبر صوت 360 درجة مضاد للماء IPX7 مع بطارية 20 ساعة ومساعد صوتي مدمج.", "price": 79.99,  "originalPrice": 99.99,  "rating": 4.6, "reviews": 1123, "category": "Electronics", "categoryId": 1, "subCategoryId": 13, "childCategoryId": 132, "image": "🔊", "images": ["🔊","🔊","🔊"], "badge": "Sale", "sku": "EL-BS-028", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 42,  "isBestSeller": true,  "isNew": false, "tags": ["speaker","bluetooth","audio","waterproof"],           "dataSheet": null,                             "video": null,                                        "createdAt": "2024-02-20" },
+    { "id": 29, "name": "Kids Dinosaur Backpack",     "nameAr": "حقيبة ظهر ديناصور للأطفال", "description": "Fun dinosaur themed backpack for kids with padded straps, multiple pockets, and reflective strips.",       "descriptionAr": "حقيبة ظهر ممتعة بطابع الديناصورات للأطفال مع أحزمة مبطنة وجيوب متعددة.", "price": 24.99,  "originalPrice": 34.99,  "rating": 4.7, "reviews": 312,  "category": "Fashion",      "categoryId": 2, "subCategoryId": 23, "childCategoryId": 231, "image": "🦕", "images": ["🦕","🦕","🦕"], "badge": "New",  "sku": "FA-KB-029", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 55,  "isBestSeller": false, "isNew": true,  "tags": ["backpack","kids","school","dinosaur"],                "dataSheet": null,                             "video": null,                                        "createdAt": "2024-03-22" },
+    { "id": 30, "name": "Protein Powder Whey 2kg",    "nameAr": "بروتين واي 2 كيلوجرام",      "description": "100% whey protein powder, 25g protein per serving, chocolate flavor, low sugar, easy mixing.",             "descriptionAr": "بروتين واي 100% بـ25 جرام بروتين في كل حصة بنكهة الشوكولاتة وسكر منخفض.", "price": 54.99,  "originalPrice": 69.99,  "rating": 4.6, "reviews": 1876, "category": "Sports",       "categoryId": 4, "subCategoryId": 41, "childCategoryId": 413, "image": "🥛", "images": ["🥛","🥛","🥛"], "badge": "Sale", "sku": "SP-PP-030", "availability": "In Stock", "availabilityAr": "متوفر",  "stock": 90,  "isBestSeller": true,  "isNew": false, "tags": ["protein","whey","supplements","fitness"],             "dataSheet": "/sheets/protein-powder.pdf",     "video": null,                                        "createdAt": "2024-01-12" }
   ],
 
   "users": [
-    {
-      "id": 1,
-      "name": "Ahmed Hassan",
-      "nameAr": "أحمد حسن",
-      "email": "ahmed@example.com",
-      "phone": "+201234567890",
-      "password": "password123",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummytoken1",
-      "address": {
-        "street": "123 Nile Street",
-        "streetAr": "123 شارع النيل",
-        "city": "Cairo",
-        "cityAr": "القاهرة",
-        "country": "Egypt",
-        "countryAr": "مصر",
-        "zip": "11511"
-      }
-    },
-    {
-      "id": 2,
-      "name": "Sara Mohamed",
-      "nameAr": "سارة محمد",
-      "email": "sara@example.com",
-      "phone": "+201098765432",
-      "password": "password123",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummytoken2",
-      "address": {
-        "street": "45 Tahrir Square",
-        "streetAr": "45 ميدان التحرير",
-        "city": "Alexandria",
-        "cityAr": "الإسكندرية",
-        "country": "Egypt",
-        "countryAr": "مصر",
-        "zip": "21500"
-      }
-    }
+    { "id": 1, "name": "Ahmed Hassan", "nameAr": "أحمد حسن",   "email": "ahmed@example.com", "phone": "+201234567890", "password": "password123", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummytoken1", "address": { "street": "123 Nile Street",    "streetAr": "123 شارع النيل",       "city": "Cairo",     "cityAr": "القاهرة",      "country": "Egypt", "countryAr": "مصر", "zip": "11511" } },
+    { "id": 2, "name": "Sara Mohamed", "nameAr": "سارة محمد",   "email": "sara@example.com",  "phone": "+201098765432", "password": "password123", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummytoken2", "address": { "street": "45 Tahrir Square",   "streetAr": "45 ميدان التحرير",     "city": "Alexandria","cityAr": "الإسكندرية",  "country": "Egypt", "countryAr": "مصر", "zip": "21500" } },
+    { "id": 3, "name": "Omar Khaled",  "nameAr": "عمر خالد",    "email": "omar@example.com",  "phone": "+201512345678", "password": "password123", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummytoken3", "address": { "street": "78 Pyramids Road",   "streetAr": "78 طريق الأهرام",      "city": "Giza",      "cityAr": "الجيزة",       "country": "Egypt", "countryAr": "مصر", "zip": "12511" } },
+    { "id": 4, "name": "Nour Ali",     "nameAr": "نور علي",     "email": "nour@example.com",  "phone": "+201987654321", "password": "password123", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummytoken4", "address": { "street": "12 Corniche Street", "streetAr": "12 شارع الكورنيش",     "city": "Mansoura",  "cityAr": "المنصورة",     "country": "Egypt", "countryAr": "مصر", "zip": "35511" } }
   ],
 
   "orders": [
     {
-      "id": 1,
-      "orderNumber": "ORD-2024-001",
-      "userId": 1,
-      "date": "2024-03-01",
-      "totalAmount": 259.98,
-      "status": "Delivered",
-      "statusAr": "تم التسليم",
-      "paymentMethod": "Credit Card",
-      "paymentMethodAr": "بطاقة ائتمان",
-      "paymentStatus": "Paid",
-      "paymentStatusAr": "مدفوع",
-      "shippingAddress": {
-        "street": "123 Nile Street",
-        "streetAr": "123 شارع النيل",
-        "city": "Cairo",
-        "cityAr": "القاهرة",
-        "country": "Egypt",
-        "countryAr": "مصر",
-        "zip": "11511"
-      },
+      "id": 1, "orderNumber": "ORD-2024-001", "userId": 1, "date": "2024-03-01", "totalAmount": 234.96,
+      "status": "Delivered", "statusAr": "تم التسليم", "paymentMethod": "Credit Card", "paymentMethodAr": "بطاقة ائتمان", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "123 Nile Street", "streetAr": "123 شارع النيل", "city": "Cairo", "cityAr": "القاهرة", "country": "Egypt", "countryAr": "مصر", "zip": "11511" },
       "items": [
-        { "productId": 1, "name": "Wireless Headphones Pro", "nameAr": "سماعات لاسلكية برو", "price": 129.99, "quantity": 1, "image": "🎧" },
-        { "productId": 8, "name": "Yoga Mat Premium",        "nameAr": "مات يوغا بريميوم",   "price": 44.99,  "quantity": 1, "image": "🧘" },
-        { "productId": 5, "name": "Vitamin C Serum",         "nameAr": "سيروم فيتامين سي",   "price": 34.99,  "quantity": 1, "image": "🧴" },
-        { "productId": 6, "name": "Design Thinking Book",    "nameAr": "كتاب تفكير التصميم", "price": 24.99,  "quantity": 2, "image": "📖" }
+        { "productId": 1,  "name": "Wireless Headphones Pro", "nameAr": "سماعات لاسلكية برو", "price": 129.99, "quantity": 1, "image": "🎧" },
+        { "productId": 8,  "name": "Yoga Mat Premium",        "nameAr": "مات يوغا بريميوم",   "price": 44.99,  "quantity": 1, "image": "🧘" },
+        { "productId": 5,  "name": "Vitamin C Serum",         "nameAr": "سيروم فيتامين سي",   "price": 34.99,  "quantity": 1, "image": "🧴" },
+        { "productId": 6,  "name": "Design Thinking Book",    "nameAr": "كتاب تفكير التصميم", "price": 24.99,  "quantity": 1, "image": "📖" }
       ],
       "timeline": [
-        { "status": "Order Placed",      "statusAr": "تم تقديم الطلب",  "date": "2024-03-01", "time": "10:30 AM", "completed": true  },
-        { "status": "Confirmed",         "statusAr": "تم التأكيد",       "date": "2024-03-01", "time": "11:00 AM", "completed": true  },
-        { "status": "Shipped",           "statusAr": "تم الشحن",         "date": "2024-03-02", "time": "09:00 AM", "completed": true  },
-        { "status": "Out for Delivery",  "statusAr": "في الطريق إليك",   "date": "2024-03-03", "time": "08:00 AM", "completed": true  },
-        { "status": "Delivered",         "statusAr": "تم التسليم",       "date": "2024-03-03", "time": "02:15 PM", "completed": true  }
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-03-01", "time": "10:30 AM", "completed": true  },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-03-01", "time": "11:00 AM", "completed": true  },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "2024-03-02", "time": "09:00 AM", "completed": true  },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "2024-03-03", "time": "08:00 AM", "completed": true  },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "2024-03-03", "time": "02:15 PM", "completed": true  }
       ]
     },
     {
-      "id": 2,
-      "orderNumber": "ORD-2024-002",
-      "userId": 1,
-      "date": "2024-03-10",
-      "totalAmount": 999.99,
-      "status": "Shipped",
-      "statusAr": "تم الشحن",
-      "paymentMethod": "Credit Card",
-      "paymentMethodAr": "بطاقة ائتمان",
-      "paymentStatus": "Paid",
-      "paymentStatusAr": "مدفوع",
-      "shippingAddress": {
-        "street": "123 Nile Street",
-        "streetAr": "123 شارع النيل",
-        "city": "Cairo",
-        "cityAr": "القاهرة",
-        "country": "Egypt",
-        "countryAr": "مصر",
-        "zip": "11511"
-      },
+      "id": 2, "orderNumber": "ORD-2024-002", "userId": 1, "date": "2024-03-10", "totalAmount": 999.99,
+      "status": "Shipped", "statusAr": "تم الشحن", "paymentMethod": "Credit Card", "paymentMethodAr": "بطاقة ائتمان", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "123 Nile Street", "streetAr": "123 شارع النيل", "city": "Cairo", "cityAr": "القاهرة", "country": "Egypt", "countryAr": "مصر", "zip": "11511" },
       "items": [
         { "productId": 9, "name": "iPhone 15 Pro", "nameAr": "آيفون 15 برو", "price": 999.99, "quantity": 1, "image": "📱" }
       ],
       "timeline": [
-        { "status": "Order Placed",      "statusAr": "تم تقديم الطلب",  "date": "2024-03-10", "time": "03:00 PM", "completed": true  },
-        { "status": "Confirmed",         "statusAr": "تم التأكيد",       "date": "2024-03-10", "time": "03:30 PM", "completed": true  },
-        { "status": "Shipped",           "statusAr": "تم الشحن",         "date": "2024-03-11", "time": "10:00 AM", "completed": true  },
-        { "status": "Out for Delivery",  "statusAr": "في الطريق إليك",   "date": "",           "time": "",         "completed": false },
-        { "status": "Delivered",         "statusAr": "تم التسليم",       "date": "",           "time": "",         "completed": false }
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-03-10", "time": "03:00 PM", "completed": true  },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-03-10", "time": "03:30 PM", "completed": true  },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "2024-03-11", "time": "10:00 AM", "completed": true  },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "",           "time": "",         "completed": false },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "",           "time": "",         "completed": false }
       ]
     },
     {
-      "id": 3,
-      "orderNumber": "ORD-2024-003",
-      "userId": 1,
-      "date": "2024-03-14",
-      "totalAmount": 239.98,
-      "status": "Confirmed",
-      "statusAr": "تم التأكيد",
-      "paymentMethod": "PayMob",
-      "paymentMethodAr": "باي موب",
-      "paymentStatus": "Paid",
-      "paymentStatusAr": "مدفوع",
-      "shippingAddress": {
-        "street": "123 Nile Street",
-        "streetAr": "123 شارع النيل",
-        "city": "Cairo",
-        "cityAr": "القاهرة",
-        "country": "Egypt",
-        "countryAr": "مصر",
-        "zip": "11511"
-      },
+      "id": 3, "orderNumber": "ORD-2024-003", "userId": 1, "date": "2024-03-14", "totalAmount": 239.98,
+      "status": "Confirmed", "statusAr": "تم التأكيد", "paymentMethod": "PayMob", "paymentMethodAr": "باي موب", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "123 Nile Street", "streetAr": "123 شارع النيل", "city": "Cairo", "cityAr": "القاهرة", "country": "Egypt", "countryAr": "مصر", "zip": "11511" },
       "items": [
-        { "productId": 7,  "name": "Mechanical Keyboard",  "nameAr": "كيبورد ميكانيكي",    "price": 149.99, "quantity": 1, "image": "⌨️" },
-        { "productId": 4,  "name": "Running Shoes Elite",  "nameAr": "حذاء ركض إيليت",     "price": 99.99,  "quantity": 1, "image": "👟" }
+        { "productId": 7,  "name": "Mechanical Keyboard", "nameAr": "كيبورد ميكانيكي", "price": 149.99, "quantity": 1, "image": "⌨️" },
+        { "productId": 4,  "name": "Running Shoes Elite", "nameAr": "حذاء ركض إيليت",  "price": 99.99,  "quantity": 1, "image": "👟" }
       ],
       "timeline": [
-        { "status": "Order Placed",      "statusAr": "تم تقديم الطلب",  "date": "2024-03-14", "time": "06:00 PM", "completed": true  },
-        { "status": "Confirmed",         "statusAr": "تم التأكيد",       "date": "2024-03-14", "time": "06:30 PM", "completed": true  },
-        { "status": "Shipped",           "statusAr": "تم الشحن",         "date": "",           "time": "",         "completed": false },
-        { "status": "Out for Delivery",  "statusAr": "في الطريق إليك",   "date": "",           "time": "",         "completed": false },
-        { "status": "Delivered",         "statusAr": "تم التسليم",       "date": "",           "time": "",         "completed": false }
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-03-14", "time": "06:00 PM", "completed": true  },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-03-14", "time": "06:30 PM", "completed": true  },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "",           "time": "",         "completed": false },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "",           "time": "",         "completed": false },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "",           "time": "",         "completed": false }
+      ]
+    },
+    {
+      "id": 4, "orderNumber": "ORD-2024-004", "userId": 1, "date": "2024-02-20", "totalAmount": 1389.97,
+      "status": "Delivered", "statusAr": "تم التسليم", "paymentMethod": "PayMob", "paymentMethodAr": "باي موب", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "123 Nile Street", "streetAr": "123 شارع النيل", "city": "Cairo", "cityAr": "القاهرة", "country": "Egypt", "countryAr": "مصر", "zip": "11511" },
+      "items": [
+        { "productId": 13, "name": "MacBook Air M3",      "nameAr": "ماك بوك إير M3",     "price": 1299.99, "quantity": 1, "image": "💻" },
+        { "productId": 23, "name": "LED Desk Lamp Smart", "nameAr": "مصباح مكتب LED ذكي", "price": 49.99,   "quantity": 1, "image": "💡" },
+        { "productId": 25, "name": "Clean Code Book",     "nameAr": "كتاب الكود النظيف",  "price": 39.99,   "quantity": 1, "image": "📘" }
+      ],
+      "timeline": [
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-02-20", "time": "01:00 PM", "completed": true },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-02-20", "time": "01:30 PM", "completed": true },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "2024-02-21", "time": "09:00 AM", "completed": true },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "2024-02-23", "time": "07:30 AM", "completed": true },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "2024-02-23", "time": "01:45 PM", "completed": true }
+      ]
+    },
+    {
+      "id": 5, "orderNumber": "ORD-2024-005", "userId": 2, "date": "2024-03-12", "totalAmount": 679.98,
+      "status": "Out for Delivery", "statusAr": "في الطريق إليك", "paymentMethod": "Credit Card", "paymentMethodAr": "بطاقة ائتمان", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "45 Tahrir Square", "streetAr": "45 ميدان التحرير", "city": "Alexandria", "cityAr": "الإسكندرية", "country": "Egypt", "countryAr": "مصر", "zip": "21500" },
+      "items": [
+        { "productId": 14, "name": "Sony WH-1000XM5",      "nameAr": "سماعات سوني",        "price": 279.99, "quantity": 1, "image": "🎧" },
+        { "productId": 26, "name": "Smart Watch Series 9", "nameAr": "ساعة ذكية سيريز 9",  "price": 399.99, "quantity": 1, "image": "⌚" }
+      ],
+      "timeline": [
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-03-12", "time": "11:00 AM", "completed": true  },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-03-12", "time": "11:30 AM", "completed": true  },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "2024-03-13", "time": "08:00 AM", "completed": true  },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "2024-03-15", "time": "09:00 AM", "completed": true  },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "",           "time": "",         "completed": false }
+      ]
+    },
+    {
+      "id": 6, "orderNumber": "ORD-2024-006", "userId": 1, "date": "2024-01-25", "totalAmount": 184.95,
+      "status": "Delivered", "statusAr": "تم التسليم", "paymentMethod": "PayMob", "paymentMethodAr": "باي موب", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "123 Nile Street", "streetAr": "123 شارع النيل", "city": "Cairo", "cityAr": "القاهرة", "country": "Egypt", "countryAr": "مصر", "zip": "11511" },
+      "items": [
+        { "productId": 19, "name": "Atomic Habits",        "nameAr": "كتاب العادات الذرية", "price": 18.99, "quantity": 1, "image": "📗" },
+        { "productId": 22, "name": "Resistance Bands Set", "nameAr": "مجموعة أربطة مقاومة", "price": 29.99, "quantity": 1, "image": "💪" },
+        { "productId": 30, "name": "Protein Powder 2kg",   "nameAr": "بروتين واي 2 كيلو",  "price": 54.99, "quantity": 1, "image": "🥛" },
+        { "productId": 12, "name": "Moisturizing Face Cream","nameAr": "كريم وجه مرطب",    "price": 28.99, "quantity": 1, "image": "🧴" }
+      ],
+      "timeline": [
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-01-25", "time": "04:00 PM", "completed": true },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-01-25", "time": "04:30 PM", "completed": true },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "2024-01-26", "time": "10:00 AM", "completed": true },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "2024-01-28", "time": "08:00 AM", "completed": true },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "2024-01-28", "time": "12:30 PM", "completed": true }
+      ]
+    },
+    {
+      "id": 7, "orderNumber": "ORD-2024-007", "userId": 3, "date": "2024-03-05", "totalAmount": 489.97,
+      "status": "Delivered", "statusAr": "تم التسليم", "paymentMethod": "Credit Card", "paymentMethodAr": "بطاقة ائتمان", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "78 Pyramids Road", "streetAr": "78 طريق الأهرام", "city": "Giza", "cityAr": "الجيزة", "country": "Egypt", "countryAr": "مصر", "zip": "12511" },
+      "items": [
+        { "productId": 20, "name": "PS5 DualSense Controller","nameAr": "يد تحكم PS5",     "price": 69.99,  "quantity": 2, "image": "🎮" },
+        { "productId": 11, "name": "4K Smart TV 55\"",        "nameAr": "تلفزيون ذكي 4K",  "price": 799.99, "quantity": 1, "image": "📺" }
+      ],
+      "timeline": [
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-03-05", "time": "07:00 PM", "completed": true },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "2024-03-05", "time": "07:30 PM", "completed": true },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "2024-03-06", "time": "09:00 AM", "completed": true },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "2024-03-08", "time": "08:30 AM", "completed": true },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "2024-03-08", "time": "03:00 PM", "completed": true }
+      ]
+    },
+    {
+      "id": 8, "orderNumber": "ORD-2024-008", "userId": 4, "date": "2024-03-16", "totalAmount": 164.97,
+      "status": "Order Placed", "statusAr": "تم تقديم الطلب", "paymentMethod": "PayMob", "paymentMethodAr": "باي موب", "paymentStatus": "Paid", "paymentStatusAr": "مدفوع",
+      "shippingAddress": { "street": "12 Corniche Street", "streetAr": "12 شارع الكورنيش", "city": "Mansoura", "cityAr": "المنصورة", "country": "Egypt", "countryAr": "مصر", "zip": "35511" },
+      "items": [
+        { "productId": 17, "name": "Football Pro Match",  "nameAr": "كرة قدم برو ماتش",   "price": 39.99, "quantity": 1, "image": "⚽" },
+        { "productId": 22, "name": "Resistance Bands Set","nameAr": "مجموعة أربطة مقاومة","price": 29.99, "quantity": 1, "image": "💪" },
+        { "productId": 30, "name": "Protein Powder 2kg",  "nameAr": "بروتين واي 2 كيلو", "price": 54.99, "quantity": 1, "image": "🥛" },
+        { "productId": 19, "name": "Atomic Habits",       "nameAr": "كتاب العادات الذرية","price": 18.99, "quantity": 1, "image": "📗" }
+      ],
+      "timeline": [
+        { "status": "Order Placed",     "statusAr": "تم تقديم الطلب", "date": "2024-03-16", "time": "09:00 AM", "completed": true  },
+        { "status": "Confirmed",        "statusAr": "تم التأكيد",      "date": "",           "time": "",         "completed": false },
+        { "status": "Shipped",          "statusAr": "تم الشحن",        "date": "",           "time": "",         "completed": false },
+        { "status": "Out for Delivery", "statusAr": "في الطريق إليك",  "date": "",           "time": "",         "completed": false },
+        { "status": "Delivered",        "statusAr": "تم التسليم",      "date": "",           "time": "",         "completed": false }
       ]
     }
   ],
 
   "cart": [
     {
-      "id": 1,
-      "userId": 1,
+      "id": 1, "userId": 1,
       "items": [
-        { "productId": 3, "name": "Smart Coffee Maker", "nameAr": "ماكينة قهوة ذكية", "price": 59.99, "quantity": 1, "image": "☕" },
-        { "productId": 2, "name": "Leather Jacket Classic", "nameAr": "جاكيت جلد كلاسيك", "price": 89.99, "quantity": 2, "image": "🧥" }
+        { "productId": 3,  "name": "Smart Coffee Maker",    "nameAr": "ماكينة قهوة ذكية",   "price": 59.99,  "quantity": 1, "image": "☕" },
+        { "productId": 2,  "name": "Leather Jacket Classic","nameAr": "جاكيت جلد كلاسيك",   "price": 89.99,  "quantity": 1, "image": "🧥" },
+        { "productId": 26, "name": "Smart Watch Series 9",  "nameAr": "ساعة ذكية سيريز 9",  "price": 399.99, "quantity": 1, "image": "⌚" }
+      ]
+    },
+    {
+      "id": 2, "userId": 2,
+      "items": [
+        { "productId": 11, "name": "4K Smart TV 55\"",   "nameAr": "تلفزيون ذكي 4K",   "price": 799.99, "quantity": 1, "image": "📺" },
+        { "productId": 16, "name": "Air Fryer XL 6.5L", "nameAr": "قلاية هوائية XL",  "price": 89.99,  "quantity": 1, "image": "🍳" }
+      ]
+    },
+    {
+      "id": 3, "userId": 3,
+      "items": [
+        { "productId": 20, "name": "PS5 DualSense Controller","nameAr": "يد تحكم PS5",       "price": 69.99,  "quantity": 1, "image": "🎮" },
+        { "productId": 28, "name": "Bluetooth Speaker 360°",  "nameAr": "سبيكر بلوتوث 360", "price": 79.99,  "quantity": 1, "image": "🔊" },
+        { "productId": 7,  "name": "Mechanical Keyboard",     "nameAr": "كيبورد ميكانيكي",  "price": 149.99, "quantity": 1, "image": "⌨️"}
       ]
     }
   ],
 
   "stats": [
-    { "id": 1, "key": "products",  "value": "1M+",  "label": "Products",   "labelAr": "منتج"           },
-    { "id": 2, "key": "sellers",   "value": "50K+", "label": "Sellers",    "labelAr": "بائع"           },
-    { "id": 3, "key": "rating",    "value": "4.8★", "label": "Avg Rating", "labelAr": "متوسط التقييم" },
-    { "id": 4, "key": "returns",   "value": "Free", "label": "Returns",    "labelAr": "إرجاع مجاني"   }
+    { "id": 1, "key": "products", "value": "1M+",  "label": "Products",   "labelAr": "منتج"           },
+    { "id": 2, "key": "sellers",  "value": "50K+", "label": "Sellers",    "labelAr": "بائع"           },
+    { "id": 3, "key": "rating",   "value": "4.8★", "label": "Avg Rating", "labelAr": "متوسط التقييم" },
+    { "id": 4, "key": "returns",  "value": "Free", "label": "Returns",    "labelAr": "إرجاع مجاني"   }
   ]
 }

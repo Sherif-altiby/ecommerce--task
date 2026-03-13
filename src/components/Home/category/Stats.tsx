@@ -1,4 +1,4 @@
-import { useLang } from '../../store/hooks'
+import { useLang } from "../../../store/hooks";
 
 const stats = [
   { num: "1M+",  labelKey: "statProducts" },
