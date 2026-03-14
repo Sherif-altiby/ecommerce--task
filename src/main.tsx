@@ -20,8 +20,8 @@ const queryClient = new QueryClient({
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-        <QueryClientProvider client={queryClient} >  {/* ← wrap with QueryClientProvider */}
-              <Provider store={store}>   {/*   wrap App with Provider */}
+        <QueryClientProvider client={queryClient} >   
+              <Provider store={store}>   
                    <App />
               </Provider>
         </QueryClientProvider>

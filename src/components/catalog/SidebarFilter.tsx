@@ -1,7 +1,5 @@
-// src/components/catalog/SidebarFilter.tsx
 import { X, Star, RotateCcw, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import type { Category, FilterState } from "../../types";
 import { useLang } from "../../store/hooks";
 
@@ -138,8 +136,7 @@ const PriceRange = ({
 const SidebarFilter = ({
   filters, categories, activeCount, onUpdate, onClear, onClose,
 }: SidebarFilterProps) => {
-  const { isAr } = useLang();
-  const { t }    = useTranslation();
+  const { isAr, t } = useLang();
 
   // Resolve selected category objects from the tree
   const selectedMain  = categories.find((c) => c.name === filters.mainCategory) ?? null;

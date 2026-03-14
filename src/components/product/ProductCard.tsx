@@ -5,6 +5,7 @@ import Stars from "../bestSeller/Stars";
 import { ROUTES, type Category, type Product } from "../../types";
 import { badgeStyles } from "../../constants";
 import { addItem } from "../../store/cartSclice";
+import Button from "../buttons/Button";
 
 interface ProductCardProps {
   product: Product;
@@ -13,7 +14,12 @@ interface ProductCardProps {
   onWishlist: (id: number) => void;
 }
 
-const ProductCard = ({ product: p, categories, inWishlist, onWishlist }: ProductCardProps) => {
+const ProductCard = ({
+  product: p,
+  categories,
+  inWishlist,
+  onWishlist,
+}: ProductCardProps) => {
   const { isAr, t } = useLang();
 
   const categoryNameAr = categories.find((c) => c.name === p.category)?.nameAr;
@@ -53,25 +59,27 @@ const ProductCard = ({ product: p, categories, inWishlist, onWishlist }: Product
         </div>
         <div className="flex items-center justify-between">
           <span className="text-lg font-black text-blue-600">${p.price}</span>
-          <button
+          <Button
+            variant="soft"
+            size="sm"
+            leftIcon={<ShoppingCart size={12} />}
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
-              dispatch(addItem({
-                    productId: p.id,
-                    name:      p.name,
-                    nameAr:    p.nameAr,
-                    price:     p.price,
-                    quantity:  1,
-                    image:     p.image,
-              }))
+              dispatch(
+                addItem({
+                  productId: p.id,
+                  name: p.name,
+                  nameAr: p.nameAr,
+                  price: p.price,
+                  quantity: 1,
+                  image: p.image,
+                }),
+              );
             }}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-50 text-blue-600 text-xs font-bold hover:bg-blue-600 hover:text-white hover:shadow-md hover:shadow-blue-300 transition-all"
-            style={{ fontFamily: "inherit" }}
           >
-            <ShoppingCart size={12} />
             {t("addToCart")}
-          </button>
+          </Button>
         </div>
       </div>
     </Link>

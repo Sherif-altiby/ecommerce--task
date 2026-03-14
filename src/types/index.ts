@@ -99,7 +99,6 @@ export const ROUTES = {
   CHECKOUT:       "/checkout",
 } as const;
 
-// src/pages/Checkout/checkout.types.ts
 
 export interface CartItem {
   productId: number;
@@ -132,3 +131,48 @@ export const SHIPPING_COST = 5.99;
 export const TAX_RATE      = 0.14;  
 
 export type PayState = "idle" | "processing" | "success" | "failure";
+
+
+export interface OrderItem {
+  productId: number;
+  name:      string;
+  nameAr:    string;
+  price:     number;
+  quantity:  number;
+  image:     string;
+}
+
+export interface TimelineStep {
+  status:    string;
+  statusAr:  string;
+  date:      string;
+  time:      string;
+  completed: boolean;
+}
+
+export interface OrderAddress {
+  street:    string;
+  streetAr:  string;
+  city:      string;
+  cityAr:    string;
+  country:   string;
+  countryAr: string;
+  zip:       string;
+}
+
+export interface Order {
+  id:               number;
+  orderNumber:      string;
+  userId:           number;
+  date:             string;
+  totalAmount:      number;
+  status:           string;
+  statusAr:         string;
+  paymentMethod:    string;
+  paymentMethodAr:  string;
+  paymentStatus:    string;
+  paymentStatusAr:  string;
+  shippingAddress:  OrderAddress;
+  items:            OrderItem[];
+  timeline:         TimelineStep[];
+}

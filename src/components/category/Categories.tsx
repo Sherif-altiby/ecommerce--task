@@ -19,7 +19,7 @@ const Categories = () => {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10">
         <div className="text-center py-10 text-slate-400 text-sm">
-          Something went wrong
+              Something went wrong
         </div>
       </div>
     );

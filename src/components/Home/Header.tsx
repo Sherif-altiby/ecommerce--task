@@ -45,7 +45,6 @@ const Header = () => {
             <User size={13} />
             <span className="hidden sm:inline">{t("nav.signIn")}</span>
           </button>
-
         </div>
       </div>
     </header>

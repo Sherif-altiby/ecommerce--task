@@ -1,4 +1,3 @@
-// src/pages/Catalog/Pagination.tsx
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLang } from "../../store/hooks";
 

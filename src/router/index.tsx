@@ -8,6 +8,7 @@ import ProductDetail from "../pages/Productdetail";
 import Footer from "../components/Home/Footer";
 import ProtectedRoute from "./ProtectedRoute";
 import CheckoutPage from "../pages/Checkout";
+import OrdersPage from "../pages/Order";
 
 const RootLayout = () => (
   <div >
@@ -28,9 +29,17 @@ const router = createBrowserRouter([
       {
         path: "checkout",
         element: (
-          <ProtectedRoute>       
-              <CheckoutPage />
-          </ProtectedRoute>
+              <ProtectedRoute>       
+                    <CheckoutPage />
+              </ProtectedRoute>
+        ),
+      },
+      {
+        path: "orders",
+        element: (
+              <ProtectedRoute>       
+                    <OrdersPage />
+              </ProtectedRoute>
         ),
       },
     ],

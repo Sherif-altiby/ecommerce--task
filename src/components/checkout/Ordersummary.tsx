@@ -2,18 +2,24 @@ import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from "lucide-react";
 import { SHIPPING_COST, TAX_RATE, type CartItem } from "../../types";
 import { useAppDispatch, useLang } from "../../store/hooks";
 import { removeItem, updateQty } from "../../store/cartSclice";
-
+import Button from "../buttons/Button";
 
 interface OrderSummaryProps {
-  items:    CartItem[];
+  items: CartItem[];
   subtotal: number;
-  tax:      number;
-  total:    number;
-  onNext:   () => void;
+  tax: number;
+  total: number;
+  onNext: () => void;
 }
 
-const OrderSummary = ({ items, subtotal, tax, total, onNext }: OrderSummaryProps) => {
-  const { t , isAr} = useLang();
+const OrderSummary = ({
+  items,
+  subtotal,
+  tax,
+  total,
+  onNext,
+}: OrderSummaryProps) => {
+  const { t, isAr } = useLang();
   const dispatch = useAppDispatch();
 
   if (items.length === 0) {
@@ -23,16 +29,13 @@ const OrderSummary = ({ items, subtotal, tax, total, onNext }: OrderSummaryProps
         <p className="text-slate-700 font-bold text-lg">
           {t("checkout.emptyCart")}
         </p>
-        <p className="text-slate-400 text-sm">
-          {t("checkout.emptyCartHint")}
-        </p>
+        <p className="text-slate-400 text-sm">{t("checkout.emptyCartHint")}</p>
       </div>
     );
   }
 
   return (
     <div className="flex flex-col gap-6">
-
       {/* ── Item list ── */}
       <div className="flex flex-col gap-3">
         {items.map((item) => (
@@ -61,17 +64,33 @@ const OrderSummary = ({ items, subtotal, tax, total, onNext }: OrderSummaryProps
                 onClick={() =>
                   item.quantity === 1
                     ? dispatch(removeItem(item.productId))
-                    : dispatch(updateQty({ productId: item.productId, quantity: item.quantity - 1 }))
+                    : dispatch(
+                        updateQty({
+                          productId: item.productId,
+                          quantity: item.quantity - 1,
+                        }),
+                      )
                 }
                 className="w-8 h-8 flex items-center justify-center text-blue-600 hover:bg-blue-50 transition-all"
               >
-                {item.quantity === 1 ? <Trash2 size={12} className="text-red-400" /> : <Minus size={12} />}
+                {item.quantity === 1 ? (
+                  <Trash2 size={12} className="text-red-400" />
+                ) : (
+                  <Minus size={12} />
+                )}
               </button>
               <span className="w-8 text-center text-sm font-extrabold text-slate-700">
                 {item.quantity}
               </span>
               <button
-                onClick={() => dispatch(updateQty({ productId: item.productId, quantity: item.quantity + 1 }))}
+                onClick={() =>
+                  dispatch(
+                    updateQty({
+                      productId: item.productId,
+                      quantity: item.quantity + 1,
+                    }),
+                  )
+                }
                 className="w-8 h-8 flex items-center justify-center text-blue-600 hover:bg-blue-50 transition-all"
               >
                 <Plus size={12} />
@@ -93,7 +112,11 @@ const OrderSummary = ({ items, subtotal, tax, total, onNext }: OrderSummaryProps
           <span className="font-semibold">${subtotal.toFixed(2)}</span>
         </div>
         <div className="flex justify-between text-sm text-slate-600">
-          <span>{isAr ? `ضريبة القيمة المضافة (${TAX_RATE * 100}%)` : `VAT (${TAX_RATE * 100}%)`}</span>
+          <span>
+            {isAr
+              ? `ضريبة القيمة المضافة (${TAX_RATE * 100}%)`
+              : `VAT (${TAX_RATE * 100}%)`}
+          </span>
           <span className="font-semibold">${tax.toFixed(2)}</span>
         </div>
         <div className="flex justify-between text-sm text-slate-600">
@@ -107,15 +130,15 @@ const OrderSummary = ({ items, subtotal, tax, total, onNext }: OrderSummaryProps
         </div>
       </div>
 
-      {/* ── CTA ── */}
-      <button
+      <Button
         onClick={onNext}
-        className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-blue-600 text-white font-extrabold text-sm hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200 active:scale-95 transition-all"
-        style={{ fontFamily: "inherit" }}
+        variant="primary"
+        size="xl"
+        fullWidth
+        rightIcon={<ArrowRight size={16} />}
       >
         {t("checkout.continueToShipping")}
-        <ArrowRight size={16} className={isAr ? "rotate-180" : ""} />
-      </button>
+      </Button>
     </div>
   );
 };

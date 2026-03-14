@@ -85,3 +85,22 @@ export const stepTitles: Record<string, { en: string; ar: string }> = {
   confirm: { en: "Review Order", ar: "مراجعة الطلب" },
   payment: { en: "Secure Payment", ar: "الدفع الآمن" },
 };
+
+
+export const STATUS_STYLES: Record<string, string> = {
+  "Order Placed":    "bg-blue-50   text-blue-600   border-blue-200",
+  "Confirmed":       "bg-indigo-50 text-indigo-600 border-indigo-200",
+  "Shipped":         "bg-amber-50  text-amber-600  border-amber-200",
+  "Out for Delivery":"bg-orange-50 text-orange-600 border-orange-200",
+  "Delivered":       "bg-emerald-50 text-emerald-600 border-emerald-200",
+  "Cancelled":       "bg-red-50    text-red-600    border-red-200",
+};
+
+export const STATUS_DOT: Record<string, string> = {
+  "Order Placed":    "bg-blue-500",
+  "Confirmed":       "bg-indigo-500",
+  "Shipped":         "bg-amber-500",
+  "Out for Delivery":"bg-orange-500 animate-pulse",
+  "Delivered":       "bg-emerald-500",
+  "Cancelled":       "bg-red-500",
+};

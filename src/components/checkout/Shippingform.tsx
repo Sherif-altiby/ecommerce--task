@@ -43,7 +43,7 @@ const inputClass = (hasError: boolean) =>
    }`;
 
 const ShippingForm = ({ defaultValues, onSubmit, onBack }: ShippingFormProps) => {
-  const { isAr } = useLang();
+  const { t, isAr } = useLang();
 
   const {
     register,
@@ -63,7 +63,7 @@ const ShippingForm = ({ defaultValues, onSubmit, onBack }: ShippingFormProps) =>
         <Field label="Full Name" labelAr="الاسم الكامل" error={errors.fullName?.message} isAr={isAr}>
           <input
             {...register("fullName")}
-            placeholder={isAr ? "أحمد حسن" : "Ahmed Hassan"}
+            placeholder={t("shipping.namePlaceholder")}
             className={inputClass(!!errors.fullName)}
             style={{ fontFamily: "inherit" }}
           />
@@ -82,7 +82,7 @@ const ShippingForm = ({ defaultValues, onSubmit, onBack }: ShippingFormProps) =>
       <Field label="Street Address" labelAr="عنوان الشارع" error={errors.street?.message} isAr={isAr}>
         <input
           {...register("street")}
-          placeholder={isAr ? "123 شارع النيل" : "123 Nile Street"}
+          placeholder={t("shipping.streetPlaceholder")}
           className={inputClass(!!errors.street)}
           style={{ fontFamily: "inherit" }}
         />
@@ -93,7 +93,7 @@ const ShippingForm = ({ defaultValues, onSubmit, onBack }: ShippingFormProps) =>
         <Field label="City" labelAr="المدينة" error={errors.city?.message} isAr={isAr}>
           <input
             {...register("city")}
-            placeholder={isAr ? "القاهرة" : "Cairo"}
+            placeholder={t("shipping.cityPlaceholder")}
             className={inputClass(!!errors.city)}
             style={{ fontFamily: "inherit" }}
           />
@@ -132,7 +132,7 @@ const ShippingForm = ({ defaultValues, onSubmit, onBack }: ShippingFormProps) =>
           style={{ fontFamily: "inherit" }}
         >
           <ArrowLeft size={15} className={isAr ? "rotate-180" : ""} />
-          {isAr ? "رجوع" : "Back"}
+          {t("shipping.back")}
         </button>
         <button
           type="submit"
@@ -141,7 +141,7 @@ const ShippingForm = ({ defaultValues, onSubmit, onBack }: ShippingFormProps) =>
           style={{ fontFamily: "inherit" }}
         >
           <CheckCircle size={15} />
-          {isAr ? "تأكيد العنوان" : "Confirm Address"}
+          {t("shipping.confirmAddress")}
           <ArrowRight size={15} className={isAr ? "rotate-180" : ""} />
         </button>
       </div>

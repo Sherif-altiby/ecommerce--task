@@ -30,7 +30,7 @@ const ImageGallery = ({ images, activeIndex, badge, onSelect, onZoom }: ImageGal
 
         {/* Badge */}
         {badge && (
-          <span className={`absolute top-3 start-3 px-3 py-1 rounded-full text-white text-xs font-extrabold uppercase tracking-wide z-10 ${badgeColors[badge] ?? "bg-blue-500"}`}>
+          <span className={`absolute top-3 inset-s-3 px-3 py-1 rounded-full text-white text-xs font-extrabold uppercase tracking-wide z-10 ${badgeColors[badge] ?? "bg-blue-500"}`}>
             {badge}
           </span>
         )}
@@ -38,7 +38,7 @@ const ImageGallery = ({ images, activeIndex, badge, onSelect, onZoom }: ImageGal
         {/* Zoom button */}
         <button
           onClick={onZoom}
-          className="absolute top-3 end-3 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 hover:scale-110 transition-all"
+          className="absolute top-3 inset-e-3 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 hover:scale-110 transition-all"
           title="Zoom"
         >
           <ZoomIn size={16} />
@@ -49,13 +49,13 @@ const ImageGallery = ({ images, activeIndex, badge, onSelect, onZoom }: ImageGal
           <>
             <button
               onClick={isAr ? next : prev}
-              className="absolute start-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 transition-all opacity-0 group-hover:opacity-100"
+              className="absolute inset-s-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 transition-all opacity-0 group-hover:opacity-100"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={isAr ? prev : next}
-              className="absolute end-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 transition-all opacity-0 group-hover:opacity-100"
+              className="absolute inset-e-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 transition-all opacity-0 group-hover:opacity-100"
             >
               <ChevronRight size={18} />
             </button>

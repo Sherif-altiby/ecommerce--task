@@ -25,7 +25,7 @@ const OrderConfirm = ({
   items, shipping, subtotal, tax, total,
   isProcessing, onBack, onPlaceOrder,
 }: OrderConfirmProps) => {
-  const { isAr } = useLang();
+  const { t , isAr} = useLang();
 
   return (
     <div className="flex flex-col gap-6">
@@ -35,7 +35,7 @@ const OrderConfirm = ({
         <div className="flex items-center gap-2 mb-4">
           <Package size={16} className="text-blue-500" />
           <h3 className="text-sm font-extrabold text-slate-800">
-            {isAr ? "المنتجات" : "Items"} ({items.length})
+            { t("confirm.items") }
           </h3>
         </div>
         <div className="flex flex-col gap-2">
@@ -65,14 +65,14 @@ const OrderConfirm = ({
         <div className="flex items-center gap-2 mb-4">
           <MapPin size={16} className="text-blue-500" />
           <h3 className="text-sm font-extrabold text-slate-800">
-            {isAr ? "عنوان الشحن" : "Shipping Address"}
+            { t("cofirm.shippingAddress")}
           </h3>
         </div>
-        <Row label={isAr ? "الاسم" : "Name"}    value={shipping.fullName} />
-        <Row label={isAr ? "الهاتف" : "Phone"}  value={shipping.phone} />
-        <Row label={isAr ? "الشارع" : "Street"} value={shipping.street} />
-        <Row label={isAr ? "المدينة" : "City"}  value={`${shipping.city}, ${shipping.zip}`} />
-        <Row label={isAr ? "الدولة" : "Country"} value={shipping.country} />
+        <Row label={t('confirm.name')}    value={shipping.fullName} />
+        <Row label={t('confirm.phone')}    value={shipping.phone} />
+        <Row label={t('confirm.street')}   value={shipping.street} />
+        <Row label={t('confirm.city')}    value={`${shipping.city}, ${shipping.zip}`} />
+        <Row label={t('confirm.country')}   value={shipping.country} />
       </div>
 
       {/* ── Price breakdown ── */}
@@ -80,7 +80,7 @@ const OrderConfirm = ({
         <div className="flex items-center gap-2 mb-4">
           <CreditCard size={16} className="text-blue-500" />
           <h3 className="text-sm font-extrabold text-slate-800">
-            {isAr ? "ملخص الدفع" : "Payment Summary"}
+            {t('confirm.paymentSummary')}
           </h3>
         </div>
         <Row label={isAr ? "المجموع الفرعي" : "Subtotal"} value={`$${subtotal.toFixed(2)}`} />
@@ -101,7 +101,7 @@ const OrderConfirm = ({
           style={{ fontFamily: "inherit" }}
         >
           <ArrowLeft size={15} className={isAr ? "rotate-180" : ""} />
-          {isAr ? "تعديل" : "Edit"}
+          {t('confirm.edit')}
         </button>
         <button
           onClick={onPlaceOrder}
@@ -112,12 +112,12 @@ const OrderConfirm = ({
           {isProcessing ? (
             <>
               <Loader2 size={16} className="animate-spin" />
-              {isAr ? "جارٍ المعالجة..." : "Processing..."}
+              { t("confirm.processing")}
             </>
           ) : (
             <>
               <CreditCard size={16} />
-              {isAr ? "تأكيد والدفع عبر PayMob" : "Confirm & Pay with PayMob"}
+              {t("confirm.placeOrder")}
             </>
           )}
         </button>

@@ -1,4 +1,3 @@
-// src/pages/Catalog/CatalogHeader.tsx
 import { SlidersHorizontal, ArrowUpDown } from "lucide-react";
 import type { FilterState } from "../../types";
 import { useLang } from "../../store/hooks";
@@ -19,7 +18,7 @@ const CatalogHeader = ({
   onMobileFilter,
   activeFilterCount,
 }: CatalogHeaderProps) => {
-  const { isAr } = useLang();
+  const { t , isAr} = useLang();
 
   const sortOptions: { value: FilterState["sortBy"]; labelEn: string; labelAr: string }[] = [
     { value: "newest",     labelEn: "Newest",          labelAr: "الأحدث"           },
@@ -32,11 +31,11 @@ const CatalogHeader = ({
     <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
       <div>
         <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
-          {isAr ? "كتالوج " : "Product "}
-          <span className="text-blue-600">{isAr ? "المنتجات" : "Catalog"}</span>
+          { t("catalog.title") }
+          <span className="text-blue-600">{t("catalog.titleHighlight")}</span>
         </h1>
         <p className="text-sm text-slate-400 mt-0.5">
-          {totalProducts} {isAr ? "منتج" : "products found"}
+          {totalProducts} {t("catalog.productsFound")}
         </p>
       </div>
 
@@ -47,9 +46,9 @@ const CatalogHeader = ({
           className="lg:hidden flex items-center gap-2 px-4 py-2 rounded-xl border border-blue-100 bg-white text-sm font-semibold text-slate-600 hover:border-blue-400 hover:text-blue-600 transition-all relative"
         >
           <SlidersHorizontal size={15} />
-          {isAr ? "تصفية" : "Filters"}
+          {t("catalog.filterBtn")}
           {activeFilterCount > 0 && (
-            <span className="absolute -top-1.5 -end-1.5 w-4 h-4 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">
+            <span className="absolute -top-1.5 -inset-e-1.5 w-4 h-4 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">
               {activeFilterCount}
             </span>
           )}

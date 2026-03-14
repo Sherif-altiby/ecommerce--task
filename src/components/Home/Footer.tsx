@@ -6,7 +6,7 @@ import FooterCol from "./FooterCol";
 import { LINKS } from "../../constants";
  
 const Footer = () => {
-  const { isAr } = useLang();
+  const { t, isAr } = useLang();
  
   return (
     <footer className="relative bg-slate-950 text-white overflow-hidden">
@@ -40,9 +40,7 @@ const Footer = () => {
 
             {/* Tagline */}
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs">
-              {isAr
-                ? "وجهتك الأولى للتسوق الذكي. منتجات أصيلة، أسعار تنافسية، وتوصيل سريع."
-                : "Your premier destination for smart shopping. Authentic products, competitive prices, and fast delivery."}
+              {t("footer.tagline")}
             </p>
 
             {/* Contact */}
@@ -50,7 +48,7 @@ const Footer = () => {
               {[
                 { icon: <Mail size={13} />,    text: "support@marketi.com" },
                 { icon: <Phone size={13} />,   text: "+20 100 000 0000" },
-                { icon: <MapPin size={13} />,  text: isAr ? "القاهرة، مصر" : "Cairo, Egypt" },
+                { icon: <MapPin size={13} />,  text: t("footer.location") },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2.5 text-xs text-slate-500 hover:text-slate-300 transition-colors">
                   <span className="text-blue-500 shrink-0">{item.icon}</span>
@@ -74,7 +72,7 @@ const Footer = () => {
           {/* Copyright */}
           <p className="text-xs text-slate-600 order-2 sm:order-1">
             © {new Date().getFullYear()} Marketi.{" "}
-            {isAr ? "جميع الحقوق محفوظة." : "All rights reserved."}
+             {t("footer.copyright")}
           </p>
 
            
