@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type LoginFormData } from "./loginSchema";
-import { DUMMY_USERS } from "./constants";
 import { useLang } from "../../store/hooks";
+import { DUMMY_USERS } from "../../constants";
 
 export const useLogin = () => {
   const navigate              = useNavigate();
@@ -34,7 +34,7 @@ export const useLogin = () => {
     );
 
     if (user) {
-    //   tokenService.setToken(user.token);
+      localStorage.setItem("token",user.token);
       localStorage.setItem("user", JSON.stringify({ name: user.name, email: user.email }));
       setSuccess(true);
       setTimeout(() => navigate("/"), 1000);

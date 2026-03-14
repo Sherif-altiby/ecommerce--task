@@ -1,6 +1,7 @@
 import { ChevronRight, TrendingUp } from "lucide-react";
-import { useLang } from "../../../store/hooks";
-import { useNavigation } from "../../../hooks/useNavigation";
+import { useLang } from "../../store/hooks";
+import { useNavigation } from "../../hooks/useNavigation";
+
 
 const BestSellerHeader = () => {
   const { t } = useLang();

@@ -1,5 +1,6 @@
-import { useLang } from "../../../store/hooks";
-import type { Category } from "../../../types";
+import { useLang } from "../../store/hooks";
+import type { Category } from "../../types";
+
 
 interface BestSellerFiltersProps {
   categories:     Category[];

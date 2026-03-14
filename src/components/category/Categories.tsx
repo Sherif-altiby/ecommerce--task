@@ -1,9 +1,9 @@
 import { ChevronRight, Zap } from "lucide-react";
-import { useLang } from "../../../store/hooks";
 import { useState } from "react";
-import { useCategories } from "../../../hooks/useCategories";
 import CategoryCard from "./CategoryCard";
-import CategorySkeleton from "../../../skeletons/CategorySkeleton";
+import { useCategories } from "../../hooks/useCategories";
+import { useLang } from "../../store/hooks";
+import CategorySkeleton from "../../skeletons/CategorySkeleton";
 
 const Categories = () => {
   const { t } = useLang();

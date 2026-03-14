@@ -1,7 +1,8 @@
+import BestSeller from "../components/bestSeller/BestSeller";
+import Categories from "../components/category/Categories";
+import Stats from "../components/category/Stats";
 import Hero from "../components/Home/Hero";
-import BestSeller from "../components/Home/bestSeller/BestSeller";
-import Categories from "../components/Home/category/Categories";
-import Stats from "../components/Home/category/Stats";
+ 
 
 export default function HomePage() {
   

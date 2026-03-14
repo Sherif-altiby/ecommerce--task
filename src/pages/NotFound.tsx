@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <div
       dir={isAr ? "rtl" : "ltr"}
-      className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 flex items-center justify-center overflow-hidden relative"
+      className="min-h-screen bg-linear-to-br from-slate-900 via-blue-950 to-indigo-950 flex items-center justify-center overflow-hidden relative"
       style={{ fontFamily: isAr ? "'Cairo', sans-serif" : "'Plus Jakarta Sans', sans-serif" }}
     >
       <style>{`

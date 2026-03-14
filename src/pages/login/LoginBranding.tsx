@@ -5,7 +5,7 @@ const LoginBranding = () => {
   const { isAr } = useLang();
 
   return (
-    <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800 flex-col items-center justify-center p-12">
+    <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-linear-to-br from-blue-900 via-blue-700 to-indigo-800 flex-col items-center justify-center p-12">
 
       {/* Background blobs */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />

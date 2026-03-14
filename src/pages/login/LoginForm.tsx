@@ -6,7 +6,6 @@ import {
 import { useState } from "react";
 import { useLang } from "../../store/hooks";
 import { useLogin } from "./useLogin";
-import { DUMMY_USERS } from "./constants";
 
 const LoginForm = () => {
   const { isAr }                                              = useLang();
@@ -20,7 +19,7 @@ const LoginForm = () => {
 
         {/* Mobile logo */}
         <div className="flex lg:hidden items-center justify-center gap-2 mb-8">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-300">
+          <div className="w-9 h-9 rounded-xl bg-linear-to-br from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-300">
             <ShoppingBag size={17} className="text-white" />
           </div>
           <span className="text-xl font-extrabold text-slate-900">
@@ -174,20 +173,6 @@ const LoginForm = () => {
               {isAr ? "أو استخدم الحساب التجريبي" : "or use demo account"}
             </span>
             <div className="flex-1 h-px bg-blue-100" />
-          </div>
-
-          {/* Demo accounts */}
-          <div className="fade-up-5 grid grid-cols-2 gap-3">
-            {DUMMY_USERS.map((user) => (
-              <button
-                key={user.email}
-                type="button"
-                className="flex flex-col items-start px-4 py-3 rounded-xl border border-blue-100 bg-blue-50 hover:border-blue-400 hover:bg-blue-100 transition-all text-start"
-              >
-                <span className="text-xs font-bold text-slate-700">{user.name}</span>
-                <span className="text-xs text-slate-400 truncate w-full">{user.email}</span>
-              </button>
-            ))}
           </div>
 
         </div>

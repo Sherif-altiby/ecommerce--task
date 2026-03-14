@@ -1,7 +1,8 @@
 import { Zap } from 'lucide-react';
-import { useLang } from '../../../store/hooks';
-import { iconMap } from '../../../utils/iconMap';
-import type { Category } from '../../../types';
+import type { Category } from '../../types';
+import { useLang } from '../../store/hooks';
+import { iconMap } from '../../utils/iconMap';
+
 
 interface CategoryCardProps {
   category:        Category;
@@ -18,7 +19,7 @@ const CategoryCard = ({ category, isActive, onSelect }: CategoryCardProps) => {
       onClick={() => onSelect(category.name)}
       className={`rounded-2xl p-5 text-center transition-all duration-200 border cursor-pointer w-full
         ${isActive
-          ? "bg-gradient-to-br from-blue-600 to-indigo-500 border-transparent shadow-lg shadow-blue-300 -translate-y-1"
+          ? "bg-linear-to-br from-blue-600 to-indigo-500 border-transparent shadow-lg shadow-blue-300 -translate-y-1"
           : "bg-white border-blue-100 hover:border-blue-400 hover:shadow-md hover:-translate-y-1"
         }`}
       style={{ fontFamily: "inherit" }}

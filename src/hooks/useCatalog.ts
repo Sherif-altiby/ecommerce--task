@@ -1,68 +1,123 @@
-import { useState, useMemo } from "react";
-import { DEFAULT_FILTERS, type FilterState } from "../types";
-import { useCategories } from "./useCategories";
-import { useProducts } from "./useProducts";
-
+// src/hooks/useCatalog.ts
+import { useState, useMemo }      from "react";
+import { useSearchParams }        from "react-router-dom";
+import { DEFAULT_FILTERS }        from "../types";
+import type { FilterState }       from "../types";
+import { useProducts }            from "./useProducts";
+import { useCategories }          from "./useCategories";
 
 const ITEMS_PER_PAGE = 8;
 
 export const useCatalog = () => {
-  const [filters, setFilters]   = useState<FilterState>(DEFAULT_FILTERS);
-  const [page, setPage]         = useState(1);
+  const [searchParams] = useSearchParams();
+
+  const [filters, setFilters] = useState<FilterState>({
+    ...DEFAULT_FILTERS,
+    mainCategory: searchParams.get("category") ?? "",
+  });
+
+  const [page, setPage]                         = useState(1);
   const [showMobileFilter, setShowMobileFilter] = useState(false);
 
-  const { data: products   = [], isLoading: loadingProducts,  isError: errorProducts  } = useProducts();
-  const { data: categories = [], isLoading: loadingCategories                          } = useCategories();
+  const { data: allProducts = [], isLoading: loadingProducts,  isError: errorProducts  } = useProducts();
+  const { data: categories  = [], isLoading: loadingCategories                          } = useCategories();
 
   const filtered = useMemo(() => {
-    let result = [...products];
+    let result = [...allProducts];
 
-    // Text search
+    // ── Resolve category objects ─────────────────────────
+    const mainCat = filters.mainCategory
+      ? categories.find((c) => c.name === filters.mainCategory) ?? null
+      : null;
+
+    const subCat = filters.subCategory && mainCat
+      ? (mainCat.subCategories ?? []).find((s) => s.name === filters.subCategory) ?? null
+      : null;
+
+    const childCat = filters.childCategory && subCat
+      ? (subCat.childCategories ?? []).find((ch) => ch.name === filters.childCategory) ?? null
+      : null;
+
+    // DEBUG — remove after confirming filter works
+    if (filters.mainCategory) {
+      console.log("[useCatalog] mainCategory:", filters.mainCategory);
+      console.log("[useCatalog] categories loaded:", categories.length);
+      console.log("[useCatalog] mainCat resolved:", mainCat);
+      console.log("[useCatalog] products before filter:", result.length);
+      console.log("[useCatalog] sample product categoryId:", result[0]?.categoryId, typeof result[0]?.categoryId);
+    }
+
+    // 1. Text search
     if (filters.search.trim()) {
       const q = filters.search.toLowerCase();
       result = result.filter(
-        (p) => p.name.toLowerCase().includes(q) || p.nameAr.includes(q)
+        (p) =>
+          p.name.toLowerCase().includes(q)               ||
+          p.nameAr.includes(q)                           ||
+          (p.description ?? "").toLowerCase().includes(q) ||
+          (p.tags ?? []).some((t) => t.toLowerCase().includes(q))
       );
     }
 
-    // Category filter
+    // 2. Main category — match by numeric categoryId
     if (filters.mainCategory) {
-      result = result.filter((p) => p.category === filters.mainCategory);
+      if (mainCat) {
+        result = result.filter((p) => Number(p.categoryId) === Number(mainCat.id));
+      } else {
+        // fallback while categories load
+        result = result.filter((p) => p.category === filters.mainCategory);
+      }
+      console.log("[useCatalog] after category filter:", result.length);
     }
 
-    // Price range
+    // 3. Sub category
+    if (filters.subCategory && subCat) {
+      result = result.filter((p) => Number(p.subCategoryId) === Number(subCat.id));
+      console.log("[useCatalog] after sub filter:", result.length);
+    }
+
+    // 4. Child category
+    if (filters.childCategory && childCat) {
+      result = result.filter((p) => Number(p.childCategoryId) === Number(childCat.id));
+      console.log("[useCatalog] after child filter:", result.length);
+    }
+
+    // 5. Price range
     result = result.filter(
       (p) => p.price >= filters.priceMin && p.price <= filters.priceMax
     );
 
-    // Rating
+    // 6. Rating
     if (filters.rating > 0) {
       result = result.filter((p) => p.rating >= filters.rating);
     }
 
-    // Sort
+    // 7. Sort
+    const out = [...result];
     switch (filters.sortBy) {
-      case "price_asc":  result.sort((a, b) => a.price  - b.price);  break;
-      case "price_desc": result.sort((a, b) => b.price  - a.price);  break;
-      case "rating":     result.sort((a, b) => b.rating - a.rating); break;
+      case "price_asc":  out.sort((a, b) => a.price  - b.price);  break;
+      case "price_desc": out.sort((a, b) => b.price  - a.price);  break;
+      case "rating":     out.sort((a, b) => b.rating - a.rating); break;
       case "newest":
-        result.sort((a, b) =>
+        out.sort((a, b) =>
           new Date(b.createdAt ?? 0).getTime() - new Date(a.createdAt ?? 0).getTime()
         );
         break;
     }
+    return out;
+  }, [allProducts, categories, filters]);
 
-    return result;
-  }, [products, filters]);
+  const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+  const paginated  = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
 
-  // ── Pagination ─────────────────────────────────────────
-  const totalPages  = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-  const paginated   = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
-  const activeCount = Object.entries(filters).filter(([k, v]) =>
-    k !== "sortBy" && k !== "priceMax" && v !== "" && v !== 0 && v !== DEFAULT_FILTERS.priceMin
-  ).length;
+  const activeCount =
+    [filters.search, filters.mainCategory, filters.subCategory, filters.childCategory]
+      .filter(Boolean).length +
+    (filters.rating > 0 ? 1 : 0) +
+    (filters.priceMin > DEFAULT_FILTERS.priceMin ? 1 : 0) +
+    (filters.priceMax < DEFAULT_FILTERS.priceMax ? 1 : 0);
 
-  const updateFilter = <K extends keyof FilterState>(key: K, value: FilterState[K]) => {
+  const updateFilter = (key: keyof FilterState, value: FilterState[keyof FilterState]) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
     setPage(1);
   };
@@ -74,11 +129,11 @@ export const useCatalog = () => {
 
   return {
     filters, updateFilter, clearFilters, activeCount,
-    products: paginated,
+    products:      paginated,
     totalProducts: filtered.length,
     categories,
     isLoading: loadingProducts || loadingCategories,
-    isError: errorProducts,
+    isError:   errorProducts,
     page, setPage, totalPages,
     showMobileFilter, setShowMobileFilter,
   };

@@ -1,23 +1,237 @@
 {
-  "signIn":            "Sign In",
-  "wishlist":          "Wishlist",
-  "cart":              "Cart",
-  "heroBadge":         "1M+ products available",
-  "heroTitle":         "Your Favourite",
-  "heroSubtitle":      "Store, Reimagined",
-  "heroDescription":   "Discover the best deals across thousands of categories",
-  "searchPlaceholder": "Search products, brands, categories...",
-  "search":            "Search",
-  "bestSellers":       "Best",
-  "sellers":           "Sellers",
-  "seeAll":            "See all",
-  "all":               "All",
-  "addToCart":         "Add",
-  "hot":               "Hot",
-  "sale":              "Sale",
-  "new":               "New",
-  "statProducts": "Products",
-  "statSellers":  "Sellers",
-  "statRating":   "Avg Rating",
-  "statReturns":  "Free Returns"
+  "common": {
+    "addToCart":      "Add to Cart",
+    "add":            "Add",
+    "back":           "Back",
+    "backToCatalog":  "Back to catalog",
+    "browseProducts": "Browse Products",
+    "clearAll":       "Clear all",
+    "loading":        "Loading...",
+    "error":          "Something went wrong",
+    "retry":          "Retry",
+    "save":           "Save",
+    "cancel":         "Cancel",
+    "confirm":        "Confirm",
+    "edit":           "Edit",
+    "delete":         "Delete",
+    "close":          "Close",
+    "new":            "New",
+    "hot":            "Hot",
+    "sale":           "Sale",
+    "reviews":        "reviews",
+    "each":           "/ each",
+    "left":           "left",
+    "only":           "Only",
+    "outOfStock":     "Out of Stock"
+  },
+
+  "nav": {
+    "home":           "Home",
+    "products":       "Products",
+    "orders":         "My Orders",
+    "checkout":       "Checkout",
+    "wishlist":       "Wishlist",
+    "cart":           "Cart",
+    "signIn":         "Sign In",
+    "signOut":        "Sign Out",
+    "account":        "Account"
+  },
+
+  "hero": {
+    "badge":          "New Collection",
+    "title":          "Shop Smarter,\nLive Better",
+    "subtitle":       "Discover thousands of products",
+    "description":    "From electronics to fashion, find everything you need at unbeatable prices with fast delivery.",
+    "searchPlaceholder": "Search products...",
+    "searchBtn":      "Search"
+  },
+
+  "stats": {
+    "products":       "Products",
+    "sellers":        "Sellers",
+    "rating":         "Avg Rating",
+    "returns":        "Free Returns"
+  },
+
+  "home": {
+    "shopBy":         "Shop by",
+    "category":       "Category",
+    "items":          "items",
+    "seeAll":         "See All",
+    "all":            "All",
+    "bestSellers":    "Best Sellers",
+    "categoriesError":"Failed to load categories"
+  },
+
+  "catalog": {
+    "title":          "Product",
+    "titleHighlight": "Catalog",
+    "productsFound":  "products found",
+    "noResults":      "No products found",
+    "noResultsHint":  "Try adjusting your filters",
+    "clearFilters":   "Clear filters",
+    "clearAll":       "Clear all",
+    "errorTitle":     "Failed to load products",
+    "errorHint":      "Make sure",
+    "filterBtn":      "Filters",
+    "sortBy":         "Sort by",
+    "sortNewest":     "Newest",
+    "sortPriceAsc":   "Price: Low → High",
+    "sortPriceDesc":  "Price: High → Low",
+    "sortRating":     "Top Rated"
+  },
+
+  "filter": {
+    "title":             "Filters",
+    "clear":             "Clear",
+    "search":            "Search",
+    "searchPlaceholder": "Search products...",
+    "category":          "Category",
+    "subCategory":       "Sub Category",
+    "childCategory":     "Child Category",
+    "priceRange":        "Price Range",
+    "priceMin":          "Min",
+    "priceMax":          "Max",
+    "priceAny":          "Any",
+    "rating":            "Rating",
+    "allRatings":        "All",
+    "stars":             "stars"
+  },
+
+  "productCard": {
+    "addToCart":      "Add",
+    "lowStock":       "Only {{count}} left",
+    "new":            "New"
+  },
+
+  "productDetail": {
+    "backToCatalog":      "Back to catalog",
+    "notFound":           "Product not found",
+    "availability":       "Availability",
+    "inStock":            "In Stock",
+    "stockLow":           "Only {{count}} left",
+    "sku":                "SKU / Product Code",
+    "quantity":           "Quantity",
+    "addToCart":          "Add to Cart",
+    "added":              "✓ Added!",
+    "addToWishlist":      "Add to Wishlist",
+    "share":              "Share",
+    "tabDescription":     "Description",
+    "tabDataSheet":       "Data Sheet",
+    "tabVideo":           "Video",
+    "dataSheetTitle":     "Technical Data Sheet",
+    "dataSheetSubtitle":  "Download the PDF for full specifications",
+    "downloadPdf":        "Download PDF",
+    "preview":            "Preview",
+    "productVideo":       "Product Video"
+  },
+
+  "checkout": {
+    "stepCart":           "Cart",
+    "stepShipping":       "Shipping",
+    "stepConfirm":        "Confirm",
+    "stepPayment":        "Payment",
+    "titleCart":          "Your Cart",
+    "titleShipping":      "Shipping Details",
+    "titleConfirm":       "Review Order",
+    "titlePayment":       "Secure Payment",
+    "subtitle":           "Safe & secure shopping with Marketi",
+    "emptyCart":          "Your cart is empty",
+    "emptyCartHint":      "Add products to start shopping",
+    "subtotal":           "Subtotal",
+    "vat":                "VAT ({{rate}}%)",
+    "shipping":           "Shipping",
+    "total":              "Total",
+    "continueToShipping": "Continue to Shipping",
+    "perEach":            "/ each"
+  },
+
+  "shipping": {
+    "fullName":           "Full Name",
+    "phone":              "Phone",
+    "street":             "Street Address",
+    "city":               "City",
+    "zip":                "ZIP Code",
+    "country":            "Country",
+    "confirmAddress":     "Confirm Address",
+    "back":               "Back",
+    "namePlaceholder":    "Ahmed Hassan",
+    "phonePlaceholder":   "+20 100 000 0000",
+    "streetPlaceholder":  "123 Nile Street",
+    "cityPlaceholder":    "Cairo",
+    "zipPlaceholder":     "11511"
+  },
+
+  "confirm": {
+    "items":              "Items",
+    "shippingAddress":    "Shipping Address",
+    "paymentSummary":     "Payment Summary",
+    "name":               "Name",
+    "phone":              "Phone",
+    "street":             "Street",
+    "city":               "City",
+    "country":            "Country",
+    "edit":               "Edit",
+    "placeOrder":         "Confirm & Pay with PayMob",
+    "processing":         "Processing..."
+  },
+
+  "payment": {
+    "gateway":            "Secure Payment Gateway",
+    "amountDue":          "Amount Due",
+    "testHint":           "Test mode: Use 4242 4242 4242 4242 to succeed, or 4000 0000 0000 0000 to fail",
+    "cardNumber":         "Card Number",
+    "cardHolder":         "Cardholder Name",
+    "cardHolderPlaceholder": "Ahmed Hassan",
+    "expiry":             "Expiry",
+    "cvv":                "CVV",
+    "payNow":             "Pay ${{amount}} Now",
+    "processing":         "Processing payment...",
+    "secureNote":         "🔒 Your payment is secured by PayMob SSL encryption",
+    "successTitle":       "Payment Successful! 🎉",
+    "successSubtitle":    "Redirecting to your orders...",
+    "failTitle":          "Payment Failed",
+    "failSubtitle":       "Returning to order confirmation..."
+  },
+
+  "footer": {
+    "newsletter":         "Newsletter",
+    "newsletterTitle":    "Get the best deals first 🎁",
+    "newsletterSubtitle": "No spam. Unsubscribe anytime.",
+    "emailPlaceholder":   "your@email.com",
+    "subscribe":          "Subscribe",
+    "subscribed":         "Thanks! Deals incoming soon",
+    "shopTitle":          "Shop",
+    "accountTitle":       "Account",
+    "supportTitle":       "Support",
+    "tagline":            "Your premier destination for smart shopping. Authentic products, competitive prices, and fast delivery.",
+    "location":           "Cairo, Egypt",
+    "copyright":          "All rights reserved.",
+    "weAccept":           "We accept",
+    "helpCenter":         "Help Center",
+    "trackOrder":         "Track Order",
+    "returnPolicy":       "Return Policy",
+    "privacyPolicy":      "Privacy Policy"
+  },
+
+  "notFound": {
+    "title":              "Oops! Page not found",
+    "subtitle":           "This page blasted off into the unknown. Let's get you back on track!",
+    "backHome":           "Back to Home",
+    "errorCode":          "ERROR · 404 · NOT FOUND"
+  },
+
+  "login": {
+    "title":              "Welcome back",
+    "subtitle":           "Sign in to your Marketi account",
+    "email":              "Email address",
+    "password":           "Password",
+    "signIn":             "Sign In",
+    "signingIn":          "Signing in...",
+    "invalidCredentials": "Invalid email or password",
+    "success":            "Login successful! Redirecting...",
+    "demoAccounts":       "Demo accounts",
+    "showPassword":       "Show password",
+    "hidePassword":       "Hide password"
+  }
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { RefreshCw } from "lucide-react";
-import { useBestSellers } from "../../../hooks/useBestSellers";
-import { useCategories }  from "../../../hooks/useCategories";
 import BestSellerHeader   from "./BestSellerHeader";
 import BestSellerFilters  from "./BestSellerFilters";
 import ProductCard        from "../product/ProductCard";
-import BestSellerSkeleton from "../../../skeletons/BestSellerSkeleton";
+import { useCategories } from "../../hooks/useCategories";
+import { useBestSellers } from "../../hooks/useBestSellers";
+import BestSellerSkeleton from "../../skeletons/BestSellerSkeleton";
 
 const BestSeller = () => {
   const [activeCategory, setActiveCategory] = useState("All");

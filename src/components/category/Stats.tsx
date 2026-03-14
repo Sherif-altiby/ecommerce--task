@@ -1,11 +1,5 @@
-import { useLang } from "../../../store/hooks";
-
-const stats = [
-  { num: "1M+",  labelKey: "statProducts" },
-  { num: "50K+", labelKey: "statSellers"  },
-  { num: "4.8★", labelKey: "statRating"   },
-  { num: "Free", labelKey: "statReturns"  },
-];
+import { stats } from "../../constants";
+import { useLang } from "../../store/hooks";
 
 const Stats = () => {
     const { t } = useLang()

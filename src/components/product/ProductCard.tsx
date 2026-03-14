@@ -1,12 +1,13 @@
-import { Heart, ShoppingCart } from "lucide-react";
-import { useLang } from "../../../store/hooks";
+import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useAppDispatch, useLang } from "../../store/hooks";
 import Stars from "../bestSeller/Stars";
-import type { Category, Product } from "../../../types";
-import { badgeStyles } from "../../../pages/login/constants";
-
+import { ROUTES, type Category, type Product } from "../../types";
+import { badgeStyles } from "../../constants";
+import { addItem } from "../../store/cartSclice";
 
 interface ProductCardProps {
-  product:    Product;
+  product: Product;
   categories: Category[];
   inWishlist: boolean;
   onWishlist: (id: number) => void;
@@ -17,23 +18,22 @@ const ProductCard = ({ product: p, categories, inWishlist, onWishlist }: Product
 
   const categoryNameAr = categories.find((c) => c.name === p.category)?.nameAr;
 
-  return (
-    <div className="bg-white rounded-2xl border border-blue-100 overflow-hidden hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-100 hover:border-blue-300 transition-all duration-200 cursor-pointer">
+  const dispatch = useAppDispatch();
 
+  return (
+    <Link
+      to={ROUTES.PRODUCT_DETAIL(p.id)}
+      className="bg-white rounded-2xl border border-blue-100 overflow-hidden hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-100 hover:border-blue-300 transition-all duration-200 cursor-pointer block"
+    >
       {/* ── Image ── */}
-      <div className="relative h-44 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center text-6xl">
+      <div className="relative h-44 bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center text-6xl">
         {p.badge && (
-          <span className={`absolute top-2.5 start-2.5 px-2.5 py-0.5 rounded-full text-white text-xs font-extrabold uppercase tracking-wide ${badgeStyles[p.badge]}`}>
+          <span
+            className={`absolute top-2.5 inset-s-2.5 px-2.5 py-0.5 rounded-full text-white text-xs font-extrabold uppercase tracking-wide ${badgeStyles[p.badge]}`}
+          >
             {t(p.badge.toLowerCase())}
           </span>
         )}
-        <button
-          onClick={(e) => { e.stopPropagation(); onWishlist(p.id); }}
-          className={`absolute top-2.5 end-2.5 w-8 h-8 rounded-full bg-white shadow flex items-center justify-center transition-all hover:scale-110 border border-blue-50
-            ${inWishlist ? "text-red-500" : "text-slate-400"}`}
-        >
-          <Heart size={14} fill={inWishlist ? "#EF4444" : "none"} />
-        </button>
         {p.image}
       </div>
 
@@ -54,6 +54,18 @@ const ProductCard = ({ product: p, categories, inWishlist, onWishlist }: Product
         <div className="flex items-center justify-between">
           <span className="text-lg font-black text-blue-600">${p.price}</span>
           <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              dispatch(addItem({
+                    productId: p.id,
+                    name:      p.name,
+                    nameAr:    p.nameAr,
+                    price:     p.price,
+                    quantity:  1,
+                    image:     p.image,
+              }))
+            }}
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-50 text-blue-600 text-xs font-bold hover:bg-blue-600 hover:text-white hover:shadow-md hover:shadow-blue-300 transition-all"
             style={{ fontFamily: "inherit" }}
           >
@@ -62,7 +74,7 @@ const ProductCard = ({ product: p, categories, inWishlist, onWishlist }: Product
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

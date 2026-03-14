@@ -1,22 +1,15 @@
 import { useState } from 'react'
 import { Search, TrendingUp } from 'lucide-react'
 import { useLang } from '../../store/hooks'
-
-const suggestions = [
-  { en: "Wireless Headphones", ar: "سماعات لاسلكية" },
-  { en: "Running Shoes",       ar: "حذاء ركض"       },
-  { en: "Coffee Maker",        ar: "ماكينة قهوة"     },
-  { en: "Leather Jacket",      ar: "جاكيت جلد"       },
-  { en: "Yoga Mat",            ar: "مات يوغا"         },
-]
+import { suggestions } from '../../constants'
 
 const Hero = () => {
-  const { t, isAr } = useLang()
+  const { t , isAr} = useLang()
   const [searchValue, setSearchValue]         = useState("")
   const [showSuggestions, setShowSuggestions] = useState(false)
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-600 to-sky-400 pt-20 pb-20 text-center px-4">
+    <section className="relative bg-linear-to-br from-blue-900 via-blue-600 to-sky-400 pt-20 pb-20 text-center px-4">
 
       {/* Glow blobs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/30 rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
@@ -33,20 +26,20 @@ const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-xs font-semibold uppercase tracking-widest mb-6">
           <TrendingUp size={11} />
-          {t("heroBadge")}
+          {t("hero.badge")}
         </div>
 
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight tracking-tight mb-3">
-          {t("heroTitle")} <br />
-          <span className="bg-gradient-to-r from-blue-200 to-indigo-200 bg-clip-text text-transparent">
-            {t("heroSubtitle")}
+          {t("hero.title")} <br />
+          <span className="bg-linear-to-r from-blue-200 to-indigo-200 bg-clip-text text-transparent">
+            {t("hero.subtitle")}
           </span>
         </h1>
 
         {/* Description */}
         <p className="text-white/60 text-base mb-10">
-          {t("heroDescription")}
+          {t("hero.description")}
         </p>
 
         {/* Search */}
@@ -62,9 +55,9 @@ const Hero = () => {
               placeholder={t("searchPlaceholder")}
               style={{ fontFamily: "inherit" }}
             />
-            <button className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-sm font-bold shrink-0 hover:opacity-90 hover:shadow-lg hover:shadow-blue-300 transition-all">
+            <button className="flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-linear-to-r from-blue-600 to-indigo-500 text-white text-sm font-bold shrink-0 hover:opacity-90 hover:shadow-lg hover:shadow-blue-300 transition-all">
               <Search size={14} />
-              {t("search")}
+              {t("hero.searchBtn")}
             </button>
           </div>
 

@@ -15,3 +15,6 @@ export const getCategories = async (): Promise<Category[]> => {
   const res = await axiosInstance.get("/categories");
   return res.data;
 };
+
+export const getProductById   = async (id: number): Promise<Product> =>
+  (await axiosInstance.get(`/products/${id}`)).data;
