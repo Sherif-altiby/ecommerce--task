@@ -22,10 +22,10 @@ export const badgeStyles: Record<string, string> = {
 };
 
 export const stats = [
-  { num: "1M+", labelKey: "statProducts" },
-  { num: "50K+", labelKey: "statSellers" },
-  { num: "4.8★", labelKey: "statRating" },
-  { num: "Free", labelKey: "statReturns" },
+  { num: "1M+",  labelKey: "stats.products" },
+  { num: "50K+", labelKey: "stats.sellers" },
+  { num: "4.8★", labelKey: "stats.rating" },
+  { num: "Free", labelKey: "stats.returns" },
 ];
 
 export const LINKS = {

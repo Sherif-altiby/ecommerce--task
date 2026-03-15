@@ -78,7 +78,7 @@ const ProductCard = ({
               );
             }}
           >
-            {t("addToCart")}
+            {t("common.addToCart")}
           </Button>
         </div>
       </div>

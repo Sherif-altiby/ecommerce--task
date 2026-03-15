@@ -1,5 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap");
 @import "tailwindcss";
 
-button { 
-    cursor: pointer;
+
+button {
+  cursor: pointer;
+}
+
+/* Hero section animation */
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes floatA {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(3deg);
+  }
+}
+@keyframes floatB {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-4deg);
+  }
+}
+@keyframes gradShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(400%);
+  }
+}
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.6);
+  }
+}
+
+.hero-title {
+  background: linear-gradient(
+    135deg,
+    #fff 0%,
+    #93c5fd 40%,
+    #818cf8 70%,
+    #fff 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradShift 6s ease infinite;
+}
+.hero-card {
+  animation: heroFade 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.hero-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.hero-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+.float-a {
+  animation: floatA 7s ease-in-out infinite;
+}
+.float-b {
+  animation: floatB 9s ease-in-out infinite 1s;
+}
+.scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(99, 102, 241, 0.08),
+    transparent
+  );
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+}
+.search-glow:focus-within {
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.35),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.suggest-item:hover .suggest-icon {
+  transform: scale(1.2);
 }

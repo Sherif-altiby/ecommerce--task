@@ -1,6 +1,6 @@
-import { ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+// src/components/product/ImageGallery.tsx
+import { ChevronLeft, ChevronRight, ZoomIn, Expand } from "lucide-react";
 import { useLang } from "../../store/hooks";
-
 
 interface ImageGalleryProps {
   images:      string[];
@@ -10,27 +10,44 @@ interface ImageGalleryProps {
   onZoom:      () => void;
 }
 
+const BADGE_STYLES: Record<string, { bg: string; dot: string }> = {
+  Hot:  { bg: "bg-rose-500",    dot: "bg-rose-300"    },
+  Sale: { bg: "bg-amber-500",   dot: "bg-amber-300"   },
+  New:  { bg: "bg-emerald-500", dot: "bg-emerald-300" },
+};
+
 const ImageGallery = ({ images, activeIndex, badge, onSelect, onZoom }: ImageGalleryProps) => {
   const { isAr } = useLang();
 
   const prev = () => onSelect((activeIndex - 1 + images.length) % images.length);
   const next = () => onSelect((activeIndex + 1) % images.length);
 
-  const badgeColors: Record<string, string> = {
-    Hot:  "bg-red-500",
-    Sale: "bg-orange-500",
-    New:  "bg-emerald-500",
-  };
+  const badgeStyle = badge ? (BADGE_STYLES[badge] ?? { bg: "bg-blue-500", dot: "bg-blue-300" }) : null;
 
   return (
     <div className="flex flex-col gap-3">
 
-      {/* ── Main image ── */}
-      <div className="relative bg-linear-to-br from-blue-50 to-indigo-100 rounded-2xl overflow-hidden aspect-square flex items-center justify-center group">
+      {/* ── Main image ─────────────────────────────────── */}
+      <div className="relative rounded-3xl overflow-hidden aspect-square group bg-linear-to-br from-slate-900 via-slate-800 to-slate-900">
+
+        {/* Subtle grid texture */}
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+            backgroundSize:  "24px 24px",
+          }}
+        />
+
+        {/* Glow behind emoji */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-48 h-48 rounded-full bg-blue-500/10 blur-3xl" />
+        </div>
 
         {/* Badge */}
-        {badge && (
-          <span className={`absolute top-3 inset-s-3 px-3 py-1 rounded-full text-white text-xs font-extrabold uppercase tracking-wide z-10 ${badgeColors[badge] ?? "bg-blue-500"}`}>
+        {badge && badgeStyle && (
+          <span className={`absolute top-4 start-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white text-[10px] font-black uppercase tracking-widest shadow-lg ${badgeStyle.bg}`}>
+            <span className={`w-1.5 h-1.5 rounded-full ${badgeStyle.dot} animate-pulse`} />
             {badge}
           </span>
         )}
@@ -38,65 +55,85 @@ const ImageGallery = ({ images, activeIndex, badge, onSelect, onZoom }: ImageGal
         {/* Zoom button */}
         <button
           onClick={onZoom}
-          className="absolute top-3 inset-e-3 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 hover:scale-110 transition-all"
+          className="absolute top-4 end-4 z-20 w-9 h-9 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/70 hover:bg-white/20 hover:text-white hover:scale-110 transition-all shadow-lg"
           title="Zoom"
         >
-          <ZoomIn size={16} />
+          <Expand size={15} />
         </button>
 
-        {/* Nav arrows — only when multiple images */}
+        {/* Nav arrows */}
         {images.length > 1 && (
           <>
             <button
               onClick={isAr ? next : prev}
-              className="absolute inset-s-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 transition-all opacity-0 group-hover:opacity-100"
+              className="absolute inset-s-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/70 hover:bg-white/20 hover:text-white transition-all shadow-lg opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 duration-200"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={isAr ? prev : next}
-              className="absolute inset-e-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-xl bg-white/80 backdrop-blur-sm shadow flex items-center justify-center text-slate-600 hover:bg-white hover:text-blue-600 transition-all opacity-0 group-hover:opacity-100"
+              className="absolute inset-e-3 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/70 hover:bg-white/20 hover:text-white transition-all shadow-lg opacity-0 group-hover:opacity-100 translate-x-1 group-hover:translate-x-0 duration-200"
             >
               <ChevronRight size={18} />
             </button>
           </>
         )}
 
-        {/* Image */}
-        <span
-          className="text-[8rem] select-none transition-transform duration-300 hover:scale-110 cursor-zoom-in"
+        {/* Emoji image */}
+        <button
           onClick={onZoom}
+          className="absolute inset-0 flex items-center justify-center cursor-zoom-in"
         >
-          {images[activeIndex]}
-        </span>
+          <span className="text-[9rem] leading-none select-none drop-shadow-2xl transition-transform duration-500 group-hover:scale-110">
+            {images[activeIndex]}
+          </span>
+        </button>
 
-        {/* Dots indicator */}
+        {/* Bottom overlay with counter + dots */}
+        <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-slate-900/70 to-transparent pointer-events-none" />
+
         {images.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
             {images.map((_, i) => (
               <button
                 key={i}
                 onClick={() => onSelect(i)}
-                className={`w-1.5 h-1.5 rounded-full transition-all ${i === activeIndex ? "bg-blue-600 w-4" : "bg-slate-300"}`}
+                className={`rounded-full transition-all duration-300 pointer-events-auto
+                  ${i === activeIndex
+                    ? "w-5 h-1.5 bg-white shadow-md"
+                    : "w-1.5 h-1.5 bg-white/40 hover:bg-white/70"
+                  }`}
               />
             ))}
           </div>
         )}
+
+        {/* Image counter top-right corner (only when multiple) */}
+        {images.length > 1 && (
+          <div className="absolute bottom-4 end-4 z-20 px-2 py-0.5 rounded-full bg-black/40 backdrop-blur-sm text-white/70 text-[10px] font-bold">
+            {activeIndex + 1} / {images.length}
+          </div>
+        )}
       </div>
 
-      {/* ── Thumbnails ── */}
+      {/* ── Thumbnails ─────────────────────────────────── */}
       {images.length > 1 && (
         <div className="flex gap-2">
           {images.map((img, i) => (
             <button
               key={i}
               onClick={() => onSelect(i)}
-              className={`flex-1 aspect-square rounded-xl bg-linear-to-br from-blue-50 to-indigo-100 flex items-center justify-center text-3xl transition-all border-2
+              className={`relative flex-1 aspect-square rounded-2xl flex items-center justify-center text-3xl transition-all duration-200 overflow-hidden
+                bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
                 ${i === activeIndex
-                  ? "border-blue-500 shadow-md shadow-blue-100 scale-105"
-                  : "border-transparent hover:border-blue-200"
+                  ? "ring-2 ring-blue-500 ring-offset-2 ring-offset-white scale-105 shadow-lg shadow-blue-200"
+                  : "opacity-60 hover:opacity-100 hover:scale-102"
                 }`}
             >
+              {/* Active glow */}
+              {i === activeIndex && (
+                <div className="absolute inset-0 bg-blue-500/10 pointer-events-none" />
+              )}
               {img}
             </button>
           ))}

@@ -1,4 +1,3 @@
-// src/hooks/useCatalog.ts
 import { useState, useMemo }      from "react";
 import { useSearchParams }        from "react-router-dom";
 import { DEFAULT_FILTERS }        from "../types";
@@ -14,6 +13,7 @@ export const useCatalog = () => {
   const [filters, setFilters] = useState<FilterState>({
     ...DEFAULT_FILTERS,
     mainCategory: searchParams.get("category") ?? "",
+    search:       searchParams.get("search")   ?? "",   // ← read search from URL
   });
 
   const [page, setPage]                         = useState(1);

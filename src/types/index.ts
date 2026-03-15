@@ -130,8 +130,6 @@ export const CHECKOUT_STEPS: { key: CheckoutStep; label: string; labelAr: string
 export const SHIPPING_COST = 5.99;
 export const TAX_RATE      = 0.14;  
 
-export type PayState = "idle" | "processing" | "success" | "failure";
-
 
 export interface OrderItem {
   productId: number;
@@ -176,3 +174,5 @@ export interface Order {
   items:            OrderItem[];
   timeline:         TimelineStep[];
 }
+
+export type PayState = "idle" | "processing" | "saving" | "success" | "failure";

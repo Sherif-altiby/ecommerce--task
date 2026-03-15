@@ -65,7 +65,7 @@ const OrderConfirm = ({
         <div className="flex items-center gap-2 mb-4">
           <MapPin size={16} className="text-blue-500" />
           <h3 className="text-sm font-extrabold text-slate-800">
-            { t("cofirm.shippingAddress")}
+            { t("confirm.shippingAddress")}
           </h3>
         </div>
         <Row label={t('confirm.name')}    value={shipping.fullName} />
