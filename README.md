@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+# E-Commerce Web Application (React + TypeScript + Tailwind CSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a **bilingual (English / Arabic) e-commerce web application** built using **React, TypeScript, and Tailwind CSS**.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The platform allows users to:  
 
-## React Compiler
+- Browse products and categories  
+- Filter and search catalog items  
+- View detailed product information, images, PDFs, and videos  
+- Place orders using a **dummy PayMob payment gateway**  
+- Track their orders via a responsive, modern interface  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app supports **EN / AR language switching** with **RTL support** for Arabic.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pages & Components  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Home Page**  
+   - Global search bar  
+   - Main categories display  
+   - Best Sellers section  
+   - Responsive layout for desktop, tablet, and mobile  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Catalog / Filteration Page**  
+   - Full product listing  
+   - Filters: product name, price range, category hierarchy, rating  
+   - Sorting: price, rating, newest  
+   - Sidebar filter panel, product grid, pagination / infinite scroll  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Product Details Page**  
+   - Product image gallery with **zoom on click**  
+   - Tabs/accordion for **Description, Data Sheets (PDF), Videos**  
+   - Add to cart button  
+   - Display product name, price, rating, availability, SKU  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. **Checkout Page + PayMob Integration**  
+   - Requires dummy login  
+   - Displays order summary: products, quantities, prices, total amount  
+   - Collect shipping address  
+   - Redirect to PayMob dummy payment page  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+5. **My Orders Page**  
+   - Displays list of user orders  
+   - Shows order number, date, total amount, current status  
+   - Order details view with products, shipping, payment method, status timeline  
+
+### Authentication (Dummy Login)  
+- Simple login form (email / phone)  
+- Login state stored in **LocalStorage / Context API**  
+- Protects checkout and orders pages  
+
+### Other Features  
+- Responsive UI (mobile/tablet/desktop)  
+- Language switcher (EN / AR) with RTL support  
+- Reusable components  
+- Loading indicators & error handling  
+- **Axios + React Query** for API integration  
+
+---
+
+## Technology Stack
+
+| Layer           | Technology / Library                |
+|-----------------|-----------------------------------|
+| Frontend        | React (Hooks)                     |
+| Type Checking   | TypeScript                        |
+| State Management| Context API / Redux               |
+| Routing         | React Router                       |
+| Styling         | Tailwind CSS                       |
+| API Integration | Axios + React Query                |
+| Language        | i18n (EN / AR)                     |
+| Payment         | PayMob Dummy Integration           |
+
+---
+
+## Non-Functional Requirements
+
+- Page load time under **3 seconds**  
+- Secure payment redirection  
+- Clean, modern **UI/UX**  
+- Cross-browser compatibility  
+- Easily extendable for **real backend integration**  
+
+---
+
+## Project Setup
+
+### Install Dependencies
+
+```bash
+npm install
